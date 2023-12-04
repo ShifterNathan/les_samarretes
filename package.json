@@ -1,0 +1,20 @@
+{
+  "name": "emvull_provider",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start",
+    "server:dev": "yarn workspace server start --watch",
+    "test:server": "yarn workspace server test",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\" "
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Nathaniel <nathanielboydvillarroel@gmail.com>",
+  "license": "MIT"
+}
