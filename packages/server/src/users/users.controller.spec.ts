@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Test, TestingModule } from "@nestjs/testing";
 import { UsersController } from "./users.controller";
 import { UsersService } from "./users.service";
@@ -14,10 +15,19 @@ import { MOCKS } from "../common/mocks";
 describe("UsersController", () => {
   let controller: UsersController;
   const { MOCK_USER_BUYER } = new MOCKS();
+=======
+import { Test, TestingModule } from '@nestjs/testing';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
+
+describe('UsersController', () => {
+  let controller: UsersController;
+>>>>>>> 0ddb4895ac0f33542e087aec6fcadb8742f52e52
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
+<<<<<<< HEAD
       providers: [
         UsersService,
         {
@@ -25,11 +35,15 @@ describe("UsersController", () => {
           useClass: Repository,
         },
       ],
+=======
+      providers: [UsersService],
+>>>>>>> 0ddb4895ac0f33542e087aec6fcadb8742f52e52
     }).compile();
 
     controller = module.get<UsersController>(UsersController);
   });
 
+<<<<<<< HEAD
   it("should be defined", () => {
     expect(controller).toBeDefined();
   });
@@ -252,4 +266,9 @@ describe("UsersController", () => {
     });
   });
   
+=======
+  it('should be defined', () => {
+    expect(controller).toBeDefined();
+  });
+>>>>>>> 0ddb4895ac0f33542e087aec6fcadb8742f52e52
 });
