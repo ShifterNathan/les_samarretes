@@ -4,7 +4,7 @@ import tw from "twin.macro";
 
 export const Header = tw.header`
   flex justify-between items-center
-  max-w-screen-xl mx-auto mt-2
+  max-w-screen-xl mx-auto mt-2 pb-5
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -26,7 +26,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! ml-3!`};
 
   img {
     ${tw`w-10 mr-3`}
@@ -35,7 +35,7 @@ export const LogoLink = styled(NavLink)`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300 mr-3
 `;
 export const MobileNavLinks = motion(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
