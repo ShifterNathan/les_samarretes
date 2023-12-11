@@ -1,7 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
 import tw from "twin.macro";
-import styled from "styled-components";
 //eslint-disable-line
 import { css } from "styled-components/macro";
 
@@ -10,52 +8,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.ts";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 import { IHeaderProps } from "../../interfaces/IHeaderProps.ts";
-
-const Header = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto mt-2
-`;
-
-export const NavLinks = tw.div`inline-block`;
-
-/* hocus: stands for "on hover or focus"
- * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
- */
-export const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-  font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
-`;
-
-export const PrimaryLink = tw(NavLink)`
-  lg:mx-0
-  px-8 py-3 rounded bg-primary-500 text-gray-100
-  hocus:bg-primary-600 hocus:text-gray-200 focus:shadow-outline
-  border-b-0
-`;
-
-export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
-
-  img {
-    ${tw`w-10 mr-3`}
-  }
-`;
-
-export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
-export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
-`;
-export const MobileNavLinks = motion(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
-  ${NavLinks} {
-    ${tw`flex flex-col items-center`}
-  }
-`);
-
-export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
-`;
+import { NavLinks, NavLink, PrimaryLink, Header, DesktopNavLinks, MobileNavLinksContainer, MobileNavLinks, NavToggle} from "./const/const.ts";
 
 const HeaderComponent = (props: IHeaderProps) => {
   /*
@@ -73,35 +26,31 @@ const HeaderComponent = (props: IHeaderProps) => {
    */
   let { roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" } = props;
 
-  const defaultLinks = [
-    <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink>
-    </NavLinks>
-  ];
+  const linksToRender: JSX.Element[] = links.map(link => {
+    const { content, href, classname, type } = link
+
+    if(type !== "Nav") return <PrimaryLink href={href} css={roundedHeaderButton && tw`rounded-full`}>{content}</PrimaryLink>
+    if(classname !== "") return <NavLink href={href} css={classname} >{content}</NavLink>
+
+    return <NavLink href={href}>{content}</NavLink>
+  })
+
+  const linksComponent = <NavLinks key={1}>{linksToRender}</NavLinks>;
 
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
-
-  links = links || defaultLinks;
 
   return (
     <Header className={className || "header-light"}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
-        {links}
+        {linksComponent}
       </DesktopNavLinks>
 
       <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
         <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
-          {links}
+          {linksComponent}
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
           {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
