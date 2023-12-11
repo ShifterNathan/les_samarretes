@@ -25,7 +25,7 @@ export const PrimaryLink: TwComponent<'a'> = tw(NavLink)`
   border-b-0
 `;
 
-export const LogoLink: TwComponent<'div'> = styled(NavLink)`
+export const LogoLink: TwComponent<'a'> = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-3!`};
   img {
     ${tw`w-10 mr-3`}
