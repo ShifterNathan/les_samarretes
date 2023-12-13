@@ -21,10 +21,9 @@ const HeaderComponent = (props: IHeaderProps) => {
   );
 
   const linksToRender: JSX.Element[] = links.map(link => {
-    const { content, href, classname, type } = link
+    const { content, href, type } = link
 
     if(type !== "Nav") return <PrimaryLink href={href}>{content}</PrimaryLink>
-    if(classname !== "") return <NavLink href={href} className={classname} >{content}</NavLink>
 
     return <NavLink href={href}>{content}</NavLink>
   })

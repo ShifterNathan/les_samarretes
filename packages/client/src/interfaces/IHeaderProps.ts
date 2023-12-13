@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 export interface IHeaderProps { 
-    links: {content: string, href: string, type: string, classname: string}[];
+    links: {content: string, href: string, type: string,}[];
     className?: string;
     collapseBreakpointClass?: string;
     logo: string,

@@ -5,19 +5,16 @@ export const HeaderNavLinks = [
       content: "About",
       type: "Nav",
       href: "/about",
-      classname: "",
     },
     {
       content: "About",
       type: "Nav",
       href: "/about",
-      classname: "",
     },
     {
       content: "About",
       type: "Nav",
       href: "/about",
-      classname: "",
     },
     {
       content: "Login",
@@ -29,7 +26,6 @@ export const HeaderNavLinks = [
       content: "Sign Up",
       type: "Primary",
       href: "/signup",
-      classname: "",
     },
   ]
 
@@ -38,19 +34,16 @@ export const HeaderNavLinks = [
       content: "About",
       type: "Nav",
       href: "/about",
-      classname: "",
     },
     {
       content: "About",
       type: "Nav",
       href: "/about",
-      classname: "",
     },
     {
       content: "About",
       type: "Nav",
       href: "/about",
-      classname: "",
     },
     {
       content: "Login",
@@ -62,7 +55,6 @@ export const HeaderNavLinks = [
       content: "Sign Up",
       type: "Primary",
       href: "/signup",
-      classname: "",
     },
   ]
 
