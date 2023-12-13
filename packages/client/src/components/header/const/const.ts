@@ -2,11 +2,6 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import tw, { TwComponent } from "twin.macro";
 
-export const Header: TwComponent<'header'> = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto mt-2 pb-5
-`;
-
 export const NavLinks: TwComponent<'div'> = tw.div`inline-block`;
 
 /* hocus: stands for "on hover or focus"

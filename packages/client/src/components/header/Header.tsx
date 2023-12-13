@@ -8,9 +8,9 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.ts";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 import { IHeaderProps } from "../../interfaces/IHeaderProps.ts";
-import { NavLinks, NavLink, PrimaryLink, Header, DesktopNavLinks, MobileNavLinksContainer, MobileNavLinks, NavToggle, LogoLink} from "./const/const.ts";
+import { NavLinks, NavLink, PrimaryLink, DesktopNavLinks, MobileNavLinksContainer, MobileNavLinks, NavToggle, LogoLink} from "./const/const.ts";
 
-const HeaderComponent = (props: IHeaderProps) => {
+const Header = (props: IHeaderProps) => {
   let { logo, logoContent, links, className, collapseBreakpointClass = "lg" } = props;
 
   const logoLink = (
@@ -34,7 +34,7 @@ const HeaderComponent = (props: IHeaderProps) => {
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   return (
-    <Header className={className || "header-light"}>
+    <header className={`flex justify-between items-center max-w-screen-xl mx-auto mt-2 pb-5 ${className}`}>
       <DesktopNavLinks className={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {linksComponent}
@@ -49,7 +49,7 @@ const HeaderComponent = (props: IHeaderProps) => {
           {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
         </NavToggle>
       </MobileNavLinksContainer>
-    </Header>
+    </header>
   );
 };
 
@@ -82,4 +82,4 @@ const collapseBreakPointCssMap = {
   }
 };
 
-export default HeaderComponent;
+export default Header;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, ContentContainer, Description, Heading, Text } from '../components/error/const/const';
-import HeaderComponent from '../components/header/Header';
+import Header from '../components/header/Header';
 import { HeaderNavLinks, HeaderLogo } from '../common/const';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const ErrorPage = () => {
 
   return (
     <>
-      <HeaderComponent links={HeaderNavLinks} logo={HeaderLogo} logoContent={"Les Samarretes"}/>
+      <Header links={HeaderNavLinks} logo={HeaderLogo} logoContent={"Les Samarretes"}/>
       <Container>
       <ContentContainer>
         <Heading>404</Heading>

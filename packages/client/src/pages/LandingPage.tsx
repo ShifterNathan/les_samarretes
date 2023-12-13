@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderComponent from '../components/header/Header.tsx'
+import Header from '../components/header/Header.tsx'
 //eslint-disable-line
 import { css } from "styled-components/macro";
 import { HeaderNavLinksLanding, HeaderLogo } from '../common/const.ts'
@@ -7,7 +7,7 @@ import { HeaderNavLinksLanding, HeaderLogo } from '../common/const.ts'
 const LandingPage = () => {
   return (
     <>
-        <HeaderComponent links={HeaderNavLinksLanding} logo={HeaderLogo} logoContent={"Les Samarretes"}/>
+        <Header links={HeaderNavLinksLanding} logo={HeaderLogo} logoContent={"Les Samarretes"}/>
     </>
   )
 }
