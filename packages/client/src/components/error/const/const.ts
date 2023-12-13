@@ -5,7 +5,7 @@ export const Container: TwComponent<'div'> = tw.div`
 `;
 
 export const ContentContainer: TwComponent<'div'> = tw.div`
-  text-center p-10 bg-white rounded-lg shadow-lg max-w-md mb-16
+  text-center p-10 bg-white rounded-lg shadow-lg max-w-md mb-32
 `;
 
 export const Heading: TwComponent<'h1'> = tw.h1`

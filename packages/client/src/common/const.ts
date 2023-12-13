@@ -20,7 +20,6 @@ export const HeaderNavLinks = [
       content: "Login",
       type: "Nav",
       href: "/login",
-      classname: "lg:ml-12!",
     },
     {
       content: "Sign Up",
@@ -49,7 +48,6 @@ export const HeaderNavLinks = [
       content: "Login",
       type: "Nav",
       href: "/login",
-      classname: "lg:ml-12!",
     },
     {
       content: "Sign Up",
