@@ -41,5 +41,5 @@ export const MobileNavLinks = motion(styled.div`
 `);
 
 export const DesktopNavLinks: TwComponent<'nav'> = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
+  hidden lg:flex flex-1 justify-between items-center mt-2
 `;

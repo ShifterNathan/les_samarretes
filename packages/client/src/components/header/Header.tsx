@@ -34,7 +34,7 @@ const Header = (props: IHeaderProps) => {
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   return (
-    <header className={`flex justify-between items-center max-w-screen-xl mx-auto mt-2 pb-5 ${className}`}>
+    <header className={`flex justify-between items-center max-w-screen-xl mx-auto mt-2 pb-4 ${className}`}>
       <DesktopNavLinks className={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {linksComponent}
