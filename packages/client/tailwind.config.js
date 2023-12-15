@@ -181,6 +181,10 @@ module.exports = {
       '128': '32rem',
       '144': '36rem',
     },
+    backgroundImage: {
+      'hero-pattern': "url('./assets/logo-banner3.jpg')",
+      'hero-pattern-mobile': "url('./assets/WhatsApp Image 2023-12-14 at 21.42.10_1af31135.jpg')",
+    },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
       bottom: 'bottom',
