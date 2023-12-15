@@ -182,8 +182,12 @@ module.exports = {
       '144': '36rem',
     },
     backgroundImage: {
-      'hero-pattern': "url('./assets/logo-banner3.jpg')",
-      'hero-pattern-mobile': "url('./assets/WhatsApp Image 2023-12-14 at 21.42.10_1af31135.jpg')",
+      'hero-pattern1': "url('./assets/logo-banner3.jpg')",
+      'hero-pattern-mobile1': "url('./assets/WhatsApp Image 2023-12-14 at 21.42.10_1af31135.jpg')",
+      'hero-pattern2': "url('./assets/mockup-Stella-Dazzler_Vintage-White_Studio_Front_Main_5-scaled.jpg')",
+      'hero-pattern-mobile2': "url('./assets/mockup-Stella-Dazzler_Vintage-White_Studio_Front_Main_5-scaled.jpg')",
+      'hero-pattern3': "url('./assets/logo-banner3.jpg')",
+      'hero-pattern-mobile3': "url('./assets/WhatsApp Image 2023-12-14 at 21.42.10_1af31135.jpg')",
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {

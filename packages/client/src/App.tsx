@@ -10,6 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/stanleystella" element={<HomePage />} />
           <Route path="/404" element={<ErrorPage/>} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>

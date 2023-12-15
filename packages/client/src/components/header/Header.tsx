@@ -51,7 +51,7 @@ function Header() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
               Product
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -101,21 +101,21 @@ function Header() {
             </Transition>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
             Features
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
             Marketplace
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
             Company
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
-          <a href="/login" className="text-sm font-semibold leading-6 text-gray-900 my-3">
+          <a href="/login" className="text-base font-semibold leading-6 text-gray-900 my-3">
             Log in <span aria-hidden="true"></span>
           </a>
-          <a href="/signup" className="text-sm font-semibold leading-6 rounded bg-primary-500 px-8 py-3 text-gray-100">
+          <a href="/signup" className="text-base font-semibold leading-6 rounded bg-primary-500 px-8 py-3 text-gray-100">
             Sign Up <span aria-hidden="true"></span>
           </a>
         </div>
