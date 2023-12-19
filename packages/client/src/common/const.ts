@@ -1,4 +1,4 @@
-import logo from '../logo.jpg'
+import logo from '../assets/logo.jpg'
 
 export const HeaderNavLinks = [
     {
