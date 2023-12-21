@@ -1,10 +1,11 @@
 import { HeaderLogo } from '../../common/const'
 import { ReactComponent as FacebookIcon } from "../../assets/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../assets/twitter-icon.svg";
+import ColumnWithLinks from './ColumnWithLinks';
 
-const SimpleFiveColumn = () => {
+const Footer = () => {
   return (
-    <div className='relative -mx-8 -mb-8 px-8'>
+    <div className='relativeyarnc -mb-8 px-8'>
         <div className='max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between'>
             <div className='text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0'>
                 <div className='flex items-center justify-center md:justify-start'>
@@ -21,63 +22,38 @@ const SimpleFiveColumn = () => {
                     </a>
                 </div>
             </div>
-
-            <div className='md:w-1/5'>
-                <h5 className='font-bold'>Quick Links</h5>
-                <ul className='mt-4 text-sm font-medium'> 
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Blog</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>FAQs</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Support</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>About Us</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div className='md:w-1/5'>
-                <h5 className='font-bold'>Product</h5>
-                <ul className='mt-4 text-sm font-medium'> 
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Log In</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Personal</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Business</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Team</a>
-                    </li>
-                </ul>
-            </div>
             
-            <div className='md:w-1/5'>
-                <h5 className='font-bold'>Legal</h5>
-                <ul className='mt-4 text-sm font-medium'> 
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>GDPR</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Privacy Policy</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Terms of Service</a>
-                    </li>
-                    <li className='mt-3'>
-                        <a href="" className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>Disclaimer</a>
-                    </li>
-                </ul>
-            </div>
+            <ColumnWithLinks 
+                title='Quick Links' 
+                links={[
+                    { text: 'Blog', href: '#' },
+                    { text: 'FAQs', href: '#' },
+                    { text: 'Support', href: '#' },
+                    { text: 'About Us', href: '#' },
+                ]} />
+            
+
+            <ColumnWithLinks
+                title='Product'
+                links={[
+                    { text: 'Log In', href: '#' },
+                    { text: 'Personal', href: '#' },
+                    { text: 'Business', href: '#' },
+                    { text: 'Team', href: '#' },
+                ]} />
+            
+
+            <ColumnWithLinks
+                title='Legal'
+                links={[
+                    { text: 'GDPR', href: '#' },
+                    { text: 'Privacy Policy', href: '#' },
+                    { text: 'Terms of Service', href: '#' },
+                    { text: 'Disclaimer', href: '#' },
+                ]} />
         </div>
     </div>
   )
 }
 
-export default SimpleFiveColumn
+export default Footer

@@ -9,7 +9,7 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import logo from '../../assets/logo.jpg'
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -17,10 +17,6 @@ const products = [
   { name: 'Security', description: 'Your customers data will be safe and secure', href: '#', icon: FingerPrintIcon },
   { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
   { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
 
 function classNames(...classes: any) {
@@ -51,7 +47,7 @@ function Header() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900 hover:text-primary-500">
               Product
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -65,7 +61,7 @@ function Header() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -85,29 +81,17 @@ function Header() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
-                      <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
               </Popover.Panel>
             </Transition>
           </Popover>
 
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-base font-semibold leading-6 text-gray-900 hover:text-primary-500">
             Features
           </a>
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-base font-semibold leading-6 text-gray-900 hover:text-primary-500">
             Marketplace
           </a>
-          <a href="#" className="text-base font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-base font-semibold leading-6 text-gray-900 hover:text-primary-500">
             Company
           </a>
         </Popover.Group>
@@ -155,7 +139,7 @@ function Header() {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...products, ...callsToAction].map((item) => (
+                        {[...products ].map((item) => (
                           <Disclosure.Button
                             key={item.name}
                             as="a"
