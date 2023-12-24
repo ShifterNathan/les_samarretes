@@ -10,7 +10,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import logo from '../../assets/logo.jpg'
+import { HeaderLogo } from '../../common/const'
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
   { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -24,14 +24,14 @@ function classNames(...classes: any) {
 }
 
 function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1 items-center">
           <a href="/" className="-m-1.5 p-1.5 flex items-center gap-5">
-            <img className="h-8 w-auto mb-1" src={logo} alt="logo" />
+            <img className="h-8 w-auto mb-1" src={HeaderLogo} alt="Les Samarretes logo" />
             <span className='font-bold text-xl'>Les Samarretes</span>
           </a>
         </div>
@@ -112,7 +112,7 @@ function Header() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src={logo}
+                src={HeaderLogo}
                 alt=""
               />
             </a>

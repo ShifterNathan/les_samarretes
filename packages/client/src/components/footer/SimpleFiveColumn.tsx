@@ -6,7 +6,7 @@ import ColumnWithLinks from './ColumnWithLinks';
 const Footer = () => {
   return (
     <div className='relativeyarnc -mb-8 px-8'>
-        <div className='max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between'>
+        <div className='max-w-screen-xl mx-auto py-10 flex flex-wrap justify-between'>
             <div className='text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0'>
                 <div className='flex items-center justify-center md:justify-start'>
                     <img src={HeaderLogo} alt="logo" className='w-8' />
