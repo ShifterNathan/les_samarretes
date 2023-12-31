@@ -6,6 +6,8 @@ import Header from './components/header/Header.tsx';
 import Footer from './components/footer/SimpleFiveColumn.tsx';
 import LoginPage from './pages/LoginPage.tsx';
 import PrivacyPolicy from './pages/GDPR/PrivacyPolicy.tsx';
+import TermsOfService from './pages/GDPR/TermsOfService.tsx';
+import SignUpPage from './pages/SIgnUpPage.tsx';
 
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/stanleystella" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolicy headingText='Privacy Policy' />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy headingText='Privacy Policy' />} />
+          <Route path='termsofservice' element={<TermsOfService headingText='Terms Of Service'/>} />
           <Route path="/404" element={<ErrorPage/>} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>

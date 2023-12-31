@@ -5,13 +5,13 @@ const PrivacyPolicy = (props: IGDPRProps) => {
 
   return (
     <div className="relative">
-      <div className="max-w-screen-xl mx-auto py-20 lg:py-24">
-        <div className="flex">
-          <h1 className="text-4xl sm:text-5xl font-black tracking-wide text-center text-gray-900 mb-10">
+      <div className="max-w-screen-xl mx-auto py-10 lg:py-14">
+        <div className="flex flex-col items-center px-4 sm:px-6 lg:px-4">
+          <h1 className="text-4xl sm:text-5xl font-black tracking-wide text-center text-gray-900 mb-10 w-full">
             {headingText}
           </h1>
-          <div className="text-lg  text-gray-800">
-            <p className="mt-2 leading-loose">Last updated: April 21, 2048</p>
+          <div className="text-lg text-gray-800 w-full">
+            <p className="mt-2 leading-loose">Last updated: January 1, 2024</p>
 
             <p className="mt-2 leading-loose">
               This Privacy Policy describes Our policies and procedures on the
@@ -26,7 +26,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               information in accordance with this Privacy Policy.
             </p>
 
-            <h2 className="text-3xl font-bold mt-10">Interpretation and Definitions</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Interpretation and Definitions
+            </h2>
             <h2 className="text-3xl font-bold mt-10">Interpretation</h2>
             <p className="mt-2 leading-loose">
               The words of which the initial letter is capitalized have meanings
@@ -38,7 +40,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
             </p>
 
             <h2 className="text-3xl font-bold mt-10">Definitions</h2>
-            <p className="mt-2 leading-loose">For the purposes of this Privacy Policy:</p>
+            <p className="mt-2 leading-loose">
+              For the purposes of this Privacy Policy:
+            </p>
             <ul className="list-disc list-inside">
               <li className="ml-2 mb-3">
                 <p className="mt-2 leading-loose mt-0 inline leading-normal">
@@ -76,15 +80,13 @@ const PrivacyPolicy = (props: IGDPRProps) => {
                 <strong>Country</strong> refers to: Maharashtra, India
               </li>
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose">
-                  <strong>Service Provider</strong> means any natural or legal
-                  person who processes the data on behalf of the Company. It
-                  refers to third-party companies or individuals employed by the
-                  Company to facilitate the Service, to provide the Service on
-                  behalf of the Company, to perform services related to the
-                  Service or to assist the Company in analyzing how the Service
-                  is used.
-                </p>
+                <strong>Service Provider</strong> means any natural or legal
+                person who processes the data on behalf of the Company. It
+                refers to third-party companies or individuals employed by the
+                Company to facilitate the Service, to provide the Service on
+                behalf of the Company, to perform services related to the
+                Service or to assist the Company in analyzing how the Service is
+                used.
               </li>
               <li className="ml-2 mb-3">
                 <strong>Third-party Social Media Service</strong> refers to any
@@ -92,10 +94,8 @@ const PrivacyPolicy = (props: IGDPRProps) => {
                 log in or create an account to use the Service.
               </li>
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose">
-                  <strong>Personal Data</strong> is any information that relates
-                  to an identified or identifiable individual.
-                </p>
+                <strong>Personal Data</strong> is any information that relates
+                to an identified or identifiable individual.
               </li>
               <li className="ml-2 mb-3">
                 <strong>Cookies</strong> are small files that are placed on Your
@@ -111,8 +111,12 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               </li>
             </ul>
 
-            <h2 className="text-3xl font-bold mt-10">Collecting and Using Your Personal Data</h2>
-            <h2 className="text-3xl font-bold mt-10">Types of Data Collected</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Collecting and Using Your Personal Data
+            </h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Types of Data Collected
+            </h2>
 
             <h3 className="text-xl font-bold mt-6">Personal Data</h3>
             <p className="mt-2 leading-loose">
@@ -122,14 +126,19 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               is not limited to:
             </p>
             <ul className="list-disc list-inside">
-              <li className="ml-2 mb-3">Email address</li> <li className="ml-2 mb-3">First name and last name</li>{" "}
+              <li className="ml-2 mb-3">Email address</li>{" "}
+              <li className="ml-2 mb-3">First name and last name</li>{" "}
               <li className="ml-2 mb-3">Phone number</li>{" "}
-              <li className="ml-2 mb-3">Address, State, Province, ZIP/Postal code, City</li>{" "}
+              <li className="ml-2 mb-3">
+                Address, State, Province, ZIP/Postal code, City
+              </li>{" "}
               <li className="ml-2 mb-3">Usage Data</li>
             </ul>
 
             <h3 className="text-xl font-bold mt-6">Usage Data</h3>
-            <p className="mt-2 leading-loose">Usage Data is collected automatically when using the Service.</p>
+            <p className="mt-2 leading-loose">
+              Usage Data is collected automatically when using the Service.
+            </p>
             <p className="mt-2 leading-loose">
               Usage Data may include information such as Your Device's Internet
               Protocol address (e.g. IP address), browser type, browser version,
@@ -151,7 +160,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               a mobile device.
             </p>
 
-            <h3 className="text-xl font-bold mt-6">Tracking Technologies and Cookies</h3>
+            <h3 className="text-xl font-bold mt-6">
+              Tracking Technologies and Cookies
+            </h3>
             <p className="mt-2 leading-loose">
               We use Cookies and similar tracking technologies to track the
               activity on Our Service and store certain information. Tracking
@@ -179,9 +190,7 @@ const PrivacyPolicy = (props: IGDPRProps) => {
             </p>
             <ul className="list-disc list-inside">
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose">
-                  <strong>Necessary / Essential Cookies</strong>
-                </p>
+                <strong>Necessary / Essential Cookies</strong>
                 <p className="mt-2 leading-loose">Type: Session Cookies</p>
                 <p className="mt-2 leading-loose">Administered by: Us</p>
                 <p className="mt-2 leading-loose">
@@ -195,9 +204,7 @@ const PrivacyPolicy = (props: IGDPRProps) => {
                 </p>
               </li>
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose">
-                  <strong>Cookies Policy / Notice Acceptance Cookies</strong>
-                </p>
+                <strong>Cookies Policy / Notice Acceptance Cookies</strong>
                 <p className="mt-2 leading-loose">Type: Persistent Cookies</p>
                 <p className="mt-2 leading-loose">Administered by: Us</p>
                 <p className="mt-2 leading-loose">
@@ -206,9 +213,7 @@ const PrivacyPolicy = (props: IGDPRProps) => {
                 </p>
               </li>
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose">
-                  <strong>Functionality Cookies</strong>
-                </p>
+                <strong>Functionality Cookies</strong>
                 <p className="mt-2 leading-loose">Type: Persistent Cookies</p>
                 <p className="mt-2 leading-loose">Administered by: Us</p>
                 <p className="mt-2 leading-loose">
@@ -226,8 +231,12 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               regarding cookies, please visit our Cookies Policy.
             </p>
 
-            <h2 className="text-3xl font-bold mt-10">Use of Your Personal Data</h2>
-            <p className="mt-2 leading-loose">The Company may use Personal Data for the following purposes:</p>
+            <h2 className="text-3xl font-bold mt-10">
+              Use of Your Personal Data
+            </h2>
+            <p className="mt-2 leading-loose">
+              The Company may use Personal Data for the following purposes:
+            </p>
             <ul className="list-disc list-inside">
               <li className="ml-2 mb-3">
                 <strong>To provide and maintain our Service</strong>, including
@@ -311,7 +320,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               </li>
             </ul>
 
-            <h2 className="text-3xl font-bold mt-10">Retention of Your Personal Data</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Retention of Your Personal Data
+            </h2>
             <p className="mt-2 leading-loose">
               The Company will retain Your Personal Data only for as long as is
               necessary for the purposes set out in this Privacy Policy. We will
@@ -328,7 +339,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               obligated to retain this data for longer time periods.
             </p>
 
-            <h2 className="text-3xl font-bold mt-10">Transfer of Your Personal Data</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Transfer of Your Personal Data
+            </h2>
             <p className="mt-2 leading-loose">
               Your information, including Personal Data, is processed at the
               Company's operating offices and in any other places where the
@@ -351,7 +364,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               personal information.
             </p>
 
-            <h2 className="text-3xl font-bold mt-10">Disclosure of Your Personal Data</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Disclosure of Your Personal Data
+            </h2>
             <h3 className="text-xl font-bold mt-6">Business Transactions</h3>
             <p className="mt-2 leading-loose">
               If the Company is involved in a merger, acquisition or asset sale,
@@ -373,7 +388,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
             </p>
             <ul className="list-disc list-inside">
               <li className="ml-2 mb-3">Comply with a legal obligation</li>
-              <li className="ml-2 mb-3">Protect and defend the rights or property of the Company</li>
+              <li className="ml-2 mb-3">
+                Protect and defend the rights or property of the Company
+              </li>
               <li className="ml-2 mb-3">
                 Prevent or investigate possible wrongdoing in connection with
                 the Service
@@ -385,7 +402,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               <li className="ml-2 mb-3">Protect against legal liability</li>
             </ul>
 
-            <h2 className="text-3xl font-bold mt-10">Security of Your Personal Data</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Security of Your Personal Data
+            </h2>
             <p className="mt-2 leading-loose">
               The security of Your Personal Data is important to Us, but
               remember that no method of transmission over the Internet, or
@@ -412,7 +431,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               information.
             </p>
 
-            <h2 className="text-3xl font-bold mt-10">Links to Other Websites</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Links to Other Websites
+            </h2>
             <p className="mt-2 leading-loose">
               Our Service may contain links to other websites that are not
               operated by Us. If You click on a third party link, You will be
@@ -425,7 +446,9 @@ const PrivacyPolicy = (props: IGDPRProps) => {
               services.
             </p>
 
-            <h2 className="text-3xl font-bold mt-10">Changes to this Privacy Policy</h2>
+            <h2 className="text-3xl font-bold mt-10">
+              Changes to this Privacy Policy
+            </h2>
             <p className="mt-2 leading-loose">
               We may update our Privacy Policy from time to time. We will notify
               You of any changes by posting the new Privacy Policy on this page.

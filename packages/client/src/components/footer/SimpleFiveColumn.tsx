@@ -46,9 +46,8 @@ const Footer = () => {
             <ColumnWithLinks
                 title='Legal'
                 links={[
-                    { text: 'GDPR', href: '#' },
-                    { text: 'Privacy Policy', href: '#' },
-                    { text: 'Terms of Service', href: '#' },
+                    { text: 'Privacy Policy', href: '/privacypolicy' },
+                    { text: 'Terms of Service', href: '/termsofservice' },
                     { text: 'Disclaimer', href: '#' },
                 ]} />
         </div>
