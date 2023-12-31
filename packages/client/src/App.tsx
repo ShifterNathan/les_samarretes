@@ -7,7 +7,7 @@ import Footer from './components/footer/SimpleFiveColumn.tsx';
 import LoginPage from './pages/static/LoginPage.tsx';
 import PrivacyPolicy from './pages/static/GDPR/PrivacyPolicy.tsx';
 import TermsOfService from './pages/static/GDPR/TermsOfService.tsx';
-import SignUpPage from './pages/static/SIgnUpPage.tsx';
+import SignUpPage from './pages/static/SignUpPage.tsx';
 
 
 function App() {
