@@ -1,6 +1,6 @@
-import { HeaderLogo } from '../common/const';
+import { HeaderLogo } from '../../common/const';
 
-const LoginPage = () => {
+const SignUpPage = () => {
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-16 lg:px-20">
@@ -11,7 +11,7 @@ const LoginPage = () => {
             alt="Les Samarretes logo"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Log in to your account
+            Create your account
           </h2>
         </div>
 
@@ -44,14 +44,6 @@ const LoginPage = () => {
                 >
                   Password
                 </label>
-                <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </a>
-                </div>
               </div>
               <div className="mt-2">
                 <input
@@ -76,12 +68,12 @@ const LoginPage = () => {
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Not a member?{" "}
+            Already a member?{" "}
             <a
-              href="/signup"
+              href="/login"
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
-              Sign Up!
+              Log In!
             </a>
           </p>
         </div>
@@ -90,4 +82,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignUpPage;

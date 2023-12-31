@@ -1,4 +1,4 @@
-import { IGDPRProps } from "../../interfaces/GDPR/IGDPRProps";
+import { IGDPRProps } from "../../../interfaces/GDPR/IGDPRProps";
 
 const PrivacyPolicy = (props: IGDPRProps) => {
   const { headingText } = props;

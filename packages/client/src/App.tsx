@@ -1,13 +1,13 @@
 import React from 'react';
 import HomePage from './pages/HomePage.tsx';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import ErrorPage from './pages/ErrorPage.tsx';
+import ErrorPage from './pages/static/ErrorPage.tsx';
 import Header from './components/header/Header.tsx';
 import Footer from './components/footer/SimpleFiveColumn.tsx';
-import LoginPage from './pages/LoginPage.tsx';
-import PrivacyPolicy from './pages/GDPR/PrivacyPolicy.tsx';
-import TermsOfService from './pages/GDPR/TermsOfService.tsx';
-import SignUpPage from './pages/SIgnUpPage.tsx';
+import LoginPage from './pages/static/LoginPage.tsx';
+import PrivacyPolicy from './pages/static/GDPR/PrivacyPolicy.tsx';
+import TermsOfService from './pages/static/GDPR/TermsOfService.tsx';
+import SignUpPage from './pages/static/SIgnUpPage.tsx';
 
 
 function App() {
