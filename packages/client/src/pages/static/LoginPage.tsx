@@ -46,7 +46,7 @@ const LoginPage = () => {
                 </label>
                 <div className="text-sm">
                   <a
-                    href="#"
+                    href="/sada"
                     className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
