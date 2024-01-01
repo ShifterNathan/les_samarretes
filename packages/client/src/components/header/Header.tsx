@@ -219,7 +219,7 @@ function Header() {
             </>
           ) : (
             <>
-              <a href="/login" className="text-gray-900 hover:text-primary-500">
+              <a href="/login" className="text-gray-900 hover:text-primary-500 font-semibold">
                 Log in
               </a>
               <a
