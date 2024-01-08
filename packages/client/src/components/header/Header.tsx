@@ -12,9 +12,9 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { HeaderLogo } from "../../common/const";
 import { useAuth } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../common/Logo";
 
 const products = [
   {
@@ -80,11 +80,7 @@ function Header() {
       >
         <div className="flex lg:flex-1 items-center">
           <a href="/" className="-m-1.5 p-1.5 flex items-center gap-5">
-            <img
-              className="h-8 w-auto mb-1"
-              src={HeaderLogo}
-              alt="Les Samarretes logo"
-            />
+            <Logo className="h-8 w-auto mb-1"/>
             <span className="font-bold text-xl">Les Samarretes</span>
           </a>
         </div>
@@ -243,7 +239,7 @@ function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src={HeaderLogo} alt="" />
+              <Logo className="h-8 w-auto"/>
             </a>
             <button
               type="button"
