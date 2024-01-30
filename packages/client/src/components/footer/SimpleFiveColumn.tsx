@@ -1,6 +1,6 @@
-import { HeaderLogo } from '../../common/const'
 import { ReactComponent as FacebookIcon } from "../../assets/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../assets/twitter-icon.svg";
+import Logo from "../../common/Logo";
 import ColumnWithLinks from './ColumnWithLinks';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='max-w-screen-xl mx-auto py-10 flex flex-wrap justify-between'>
             <div className='text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0'>
                 <div className='flex items-center justify-center md:justify-start'>
-                    <img src={HeaderLogo} alt="logo" className='w-8' />
+                    <Logo className="w-8" />
                     <h5 className='ml-2 text-xl font-black text-primary-500'>Les Samarretes</h5>
                 </div>
                 <p className='mt-4 max-w-xs font-medium text-sm mx-auto md:mx-0 md:mr-4'>Treact is an Internet Technology company providing design resources such as website templates and themes.</p>
@@ -24,32 +24,27 @@ const Footer = () => {
             </div>
             
             <ColumnWithLinks 
-                title='Quick Links' 
+                title='Links de interés' 
                 links={[
-                    { text: 'Blog', href: '#' },
-                    { text: 'FAQs', href: '#' },
-                    { text: 'Support', href: '#' },
-                    { text: 'About Us', href: '#' },
-                ]} />
-            
+                    { text: 'Información de interés', href: '#' },
+                    { text: 'Compromiso empresarial', href: '#' },
+                    { text: 'Contacto', href: '#' },
+                ]} />         
 
             <ColumnWithLinks
-                title='Product'
+                title='Soporte'
                 links={[
-                    { text: 'Log In', href: '#' },
-                    { text: 'Personal', href: '#' },
-                    { text: 'Business', href: '#' },
-                    { text: 'Team', href: '#' },
+                    { text: 'Soporte', href: '#' },
+                    { text: 'Cómo comprar', href: '#' },
+                    { text: 'Proceso de compra-entrega', href: '#' },
                 ]} />
             
-
             <ColumnWithLinks
                 title='Legal'
                 links={[
-                    { text: 'GDPR', href: '#' },
-                    { text: 'Privacy Policy', href: '#' },
-                    { text: 'Terms of Service', href: '#' },
-                    { text: 'Disclaimer', href: '#' },
+                    { text: 'Política de privacidad', href: '/privacypolicy' },
+                    { text: 'Terminos de servicio', href: '/termsofservice' },
+                    { text: 'Normativa de entrega', href: '#' },
                 ]} />
         </div>
     </div>

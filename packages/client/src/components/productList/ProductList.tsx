@@ -73,9 +73,9 @@ const getRandomCards = () => {
 };
 
 const data = {
-  heading: "Checkout the Menu",
+  heading: "Checkout our products",
   tabs: {
-    Starters: [
+    StanleyStella: [
       {
         imageSrc:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
@@ -157,9 +157,9 @@ const data = {
         url: "#"
       }
     ],
-    Main: getRandomCards(),
-    Soup: getRandomCards(),
-    Desserts: getRandomCards()
+    Marca: getRandomCards(),
+    OtraMarca: getRandomCards(),
+    OtraOtraMarca: getRandomCards()
   }
 }
 
@@ -173,7 +173,7 @@ const ProductList = () => {
       <div className="max-w-screen-xl mx-auto py-20 lg:py-24">
         <div className="flex justify-between items-center flex-col xl:flex-row">
           <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center">
-            Checkout the Menu
+            Checkout Our Products
           </h2>
           <div className="flex flex-wrap bg-gray-200 px-2 py-2 rounded leading-none mt-12 xl:mt-0">
             {Object.keys(data.tabs).map((tabName, index) => (
