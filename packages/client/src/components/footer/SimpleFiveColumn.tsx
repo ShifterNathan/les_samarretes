@@ -24,31 +24,27 @@ const Footer = () => {
             </div>
             
             <ColumnWithLinks 
-                title='Quick Links' 
+                title='Links de interés' 
                 links={[
-                    { text: 'Blog', href: '#' },
-                    { text: 'FAQs', href: '#' },
-                    { text: 'Support', href: '#' },
-                    { text: 'About Us', href: '#' },
-                ]} />
-            
+                    { text: 'Información de interés', href: '#' },
+                    { text: 'Compromiso empresarial', href: '#' },
+                    { text: 'Contacto', href: '#' },
+                ]} />         
 
             <ColumnWithLinks
-                title='Product'
+                title='Soporte'
                 links={[
-                    { text: 'Log In', href: '#' },
-                    { text: 'Personal', href: '#' },
-                    { text: 'Business', href: '#' },
-                    { text: 'Team', href: '#' },
+                    { text: 'Soporte', href: '#' },
+                    { text: 'Cómo comprar', href: '#' },
+                    { text: 'Proceso de compra-entrega', href: '#' },
                 ]} />
             
-
             <ColumnWithLinks
                 title='Legal'
                 links={[
-                    { text: 'Privacy Policy', href: '/privacypolicy' },
-                    { text: 'Terms of Service', href: '/termsofservice' },
-                    { text: 'Disclaimer', href: '#' },
+                    { text: 'Política de privacidad', href: '/privacypolicy' },
+                    { text: 'Terminos de servicio', href: '/termsofservice' },
+                    { text: 'Normativa de entrega', href: '#' },
                 ]} />
         </div>
     </div>
