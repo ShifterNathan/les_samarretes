@@ -1,18 +1,22 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
-import { ProductsDataSetConst } from './core/constants/products-dataset.constant';
-import { ProductsDatasetInterface } from './core/interfaces/products-dataset.interface';
+import { ProductsDataSetConst } from './core/constants/products.constants';
+
 
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) { }
 
 
-  @Get()
+  @Get('data')
   getProductsData(productsDataSetConst: typeof ProductsDataSetConst) {
     return this.productsService.getProductsData(productsDataSetConst);
+  }
+
+  @Get('stock')
+  getProductsStock(productsDataSetConst: typeof ProductsDataSetConst) {
+    return this.productsService.getProductsStock(productsDataSetConst);
   }
 
   @Get()

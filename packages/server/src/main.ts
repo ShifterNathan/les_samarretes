@@ -18,7 +18,7 @@ async function bootstrap() {
   //Documentación con swagger
   const config = new DocumentBuilder()
   .addBearerAuth()
-  .setTitle('Retail Rangers Ecommerce API')
+  .setTitle('Les Samarretes API')
   .setDescription('Documentación completa de los endpoints de nuestra aplicación')
   .setVersion('1.0')
   .addTag('Ecommerce API')
