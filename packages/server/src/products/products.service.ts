@@ -26,7 +26,7 @@ export class ProductsService {
         'Content-Type': 'application/json'
       }
     }).then(response => response.data).then(data => (data))
-      .catch(error => console.log({ error }, 'error in the catch'));
+      .catch(error => console.log({ error }));
 
     const jsonResponse = JSON.stringify(apiResponse, null, 2);
 
@@ -34,6 +34,34 @@ export class ProductsService {
       if (error) throw new Error(error)
     });
   }
+
+  async getProductsStock(productsDataSetConst): Promise<AxiosResponse | null> {
+    const body = {
+      jsonrpc: "2.0",
+      method: "call",
+      params: {
+        db_name: productsDataSetConst.db_name,
+        user: productsDataSetConst.user,
+        password: productsDataSetConst.password,
+        LanguageCode: productsDataSetConst.LanguageCode
+      }
+    }
+
+    const apiUrl = 'https://api.stanleystella.com/webrequest/v2/stock/get_json'
+
+    const apiResponse = await axios.post(apiUrl, body, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(response => response.data).then(data => (data))
+      .catch(error => console.log({ error }));
+
+    const jsonResponse = JSON.stringify(apiResponse, null, 2);
+
+    return apiResponse;
+   
+    }
+  
 
   findAll() {
     return `This action returns all products`;
@@ -48,3 +76,5 @@ export class ProductsService {
   }
 
 }
+
+

@@ -7,6 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/products.module';
 
+
 @Module({
   imports: [
     AuthModule,
@@ -24,8 +25,9 @@ import { ProductsModule } from './products/products.module';
       synchronize: true,
       cache: true,
     }),
-    ProductsModule,],
+    ProductsModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
