@@ -94,7 +94,12 @@ export class UsersService {
       }
     }
 
-    const updatedUser = await this.userModel.findOneAndUpdate({ email: email }, updateUserDto, { new: true }).exec();
+    const updateObject = {
+      ...updateUserDto,
+      updatedAt: new Date(),
+    }
+
+    const updatedUser = await this.userModel.findOneAndUpdate({ email: email }, updateObject , { new: true }).exec();
 
     if (!updatedUser) {
       throw new DataBaseException(`User with email ${email} not found`, 404);
