@@ -8,44 +8,72 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-  UserIcon,
-  ShoppingCartIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useAuth } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../common/Logo";
+import CartPopover from "../cart/CartPopover";
 
 const products = [
   {
+    id: 1,
     name: "Analytics",
     description: "Get a better understanding of your traffic",
     href: "#",
     icon: ChartPieIcon,
+    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    imageAlt: "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
+    color: "Salmon",
+    quantity: 2,
   },
   {
+    id: 2,
     name: "Engagement",
     description: "Speak directly to your customers",
     href: "#",
     icon: CursorArrowRaysIcon,
+    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
+    imageAlt:
+      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    color: "Blue",
+    quantity: 1,
+
   },
   {
+    id: 3,
     name: "Security",
     description: "Your customers data will be safe and secure",
     href: "#",
     icon: FingerPrintIcon,
+    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg",
+    imageAlt: "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    color: "Blue",
+    quantity: 1,
   },
   {
+    id: 4,
     name: "Integrations",
     description: "Connect with third-party tools",
     href: "#",
     icon: SquaresPlusIcon,
+    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-04.jpg",
+    imageAlt: "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    color: "Blue",
+    quantity: 1,
+
   },
   {
+    id: 5,
     name: "Automations",
     description: "Build strategic funnels that will convert",
     href: "#",
     icon: ArrowPathIcon,
+    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-05.jpg",
+    imageAlt: "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    color: "Blue",
+    quantity: 1,
   },
 ];
 
@@ -63,10 +91,6 @@ function Header() {
     // Add more user navigation items here
   ];
 
-  const handleCartClick = () => {
-    navigate("/cart");
-  };
-
   const handleLogout = () => {
     toggleAuth();
     navigate("/");
@@ -75,7 +99,7 @@ function Header() {
   return (
     <header className="bg-white">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-gray-200" 
         aria-label="Global"
       >
         <div className="flex lg:flex-1 items-center">
@@ -167,7 +191,7 @@ function Header() {
             <>
               <Popover className="relative inline-flex">
                 <Popover.Button className="text-gray-900 hover:text-primary-500">
-                  <UserIcon className="h-8 w-8 align-middle" />
+                  <UserCircleIcon className="h-8 w-8" />
                 </Popover.Button>
                 <Transition
                   as={Fragment}
@@ -205,13 +229,7 @@ function Header() {
                   </Popover.Panel>
                 </Transition>
               </Popover>
-              <button
-                onClick={handleCartClick}
-                aria-label="Shopping Cart"
-                className="text-gray-900 hover:text-primary-500"
-              >
-                <ShoppingCartIcon className="h-8 w-8 align-middle" />
-              </button>
+              <CartPopover products={products} />
             </>
           ) : (
             <>

@@ -6,6 +6,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { UserProvider } from "./context/userContext.tsx";
 import ErrorPage from "./pages/static/ErrorPage.tsx";
 import Header from "./components/header/Header.tsx";
 import Footer from "./components/footer/SimpleFiveColumn.tsx";
@@ -13,7 +14,8 @@ import LoginPage from "./pages/static/LoginPage.tsx";
 import PrivacyPolicy from "./pages/static/GDPR/PrivacyPolicy.tsx";
 import TermsOfService from "./pages/static/GDPR/TermsOfService.tsx";
 import SignUpPage from "./pages/static/SignUpPage.tsx";
-import { UserProvider } from "./context/userContext.tsx";
+import Cart from "./pages/Cart.tsx";
+
 
 function App() {
   return (
@@ -26,7 +28,7 @@ function App() {
             <Route path="/stanleystella" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignUpPage />} />
-            <Route path="/cart" element={<div>Cart</div>} />
+            <Route path="/cart" element={<Cart/>} />
             <Route
               path="/privacypolicy"
               element={<PrivacyPolicy headingText="Privacy Policy" />}
