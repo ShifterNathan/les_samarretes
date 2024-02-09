@@ -12,7 +12,7 @@ const ColumnWithLinks = (props: IColumnWithLinksProps) => {
         {links.map(link => {
             return (
                 <li className='mt-3'>
-                    <a href={link.href} className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300'>{link.text}</a>
+                    <a href={link.href} className='border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300 mb-4'>{link.text}</a>
                 </li>
             )
         })}

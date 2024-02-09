@@ -23,8 +23,10 @@ const products = [
     description: "Get a better understanding of your traffic",
     href: "#",
     icon: ChartPieIcon,
-    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
-    imageAlt: "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    imageAlt:
+      "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
     color: "Salmon",
     quantity: 2,
   },
@@ -34,12 +36,12 @@ const products = [
     description: "Speak directly to your customers",
     href: "#",
     icon: CursorArrowRaysIcon,
-    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
     imageAlt:
       "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
     color: "Blue",
     quantity: 1,
-
   },
   {
     id: 3,
@@ -47,8 +49,10 @@ const products = [
     description: "Your customers data will be safe and secure",
     href: "#",
     icon: FingerPrintIcon,
-    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg",
-    imageAlt: "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg",
+    imageAlt:
+      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
     color: "Blue",
     quantity: 1,
   },
@@ -58,11 +62,12 @@ const products = [
     description: "Connect with third-party tools",
     href: "#",
     icon: SquaresPlusIcon,
-    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-04.jpg",
-    imageAlt: "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-04.jpg",
+    imageAlt:
+      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
     color: "Blue",
     quantity: 1,
-
   },
   {
     id: 5,
@@ -70,8 +75,10 @@ const products = [
     description: "Build strategic funnels that will convert",
     href: "#",
     icon: ArrowPathIcon,
-    imageSrc: "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-05.jpg",
-    imageAlt: "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-05.jpg",
+    imageAlt:
+      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
     color: "Blue",
     quantity: 1,
   },
@@ -94,17 +101,17 @@ function Header() {
   const handleLogout = () => {
     toggleAuth();
     navigate("/");
-  }
+  };
 
   return (
     <header className="bg-white">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-gray-200" 
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-gray-200"
         aria-label="Global"
       >
         <div className="flex lg:flex-1 items-center">
           <a href="/" className="-m-1.5 p-1.5 flex items-center gap-5">
-            <Logo className="h-8 w-auto mb-1"/>
+            <Logo className="h-8 w-auto mb-1" />
             <span className="font-bold text-xl">Les Samarretes</span>
           </a>
         </div>
@@ -233,7 +240,10 @@ function Header() {
             </>
           ) : (
             <>
-              <a href="/login" className="text-gray-900 hover:text-primary-500 font-semibold">
+              <a
+                href="/login"
+                className="text-gray-900 hover:text-primary-500 font-semibold"
+              >
                 Log in
               </a>
               <a
@@ -246,116 +256,139 @@ function Header() {
           )}
         </div>
       </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <Logo className="h-8 w-auto"/>
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900">
-                        Product
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                          aria-hidden="true"
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {products.map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
+      <Transition.Root show={mobileMenuOpen} as={Fragment}>
+        <Dialog
+          as="div"
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30" />
+          </Transition.Child>
+
+          <Transition.Child
+            as={Fragment}
+            enter="transition ease-out duration-300"
+            enterFrom="transform opacity-0 translate-x-full"
+            enterTo="transform opacity-100 translate-x-0"
+            leave="transition ease-in duration-200"
+            leaveFrom="transform opacity-100 translate-x-0"
+            leaveTo="transform opacity-0 translate-x-full"
+          >
+            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-white p-6 sm:ring-1 sm:ring-gray-900/10">
+              <div className="flex items-center justify-between">
+                <a href="#" className="-m-1.5 p-1.5">
+                  <span className="sr-only">Your Company</span>
+                  <Logo className="h-8 w-auto" />
                 </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                <button
+                  type="button"
+                  className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
+                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
               </div>
-              <div className="py-6 space-y-4">
-                {isAuthenticated ? (
-                  <>
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6">
+                    <Disclosure as="div" className="-mx-3">
+                      {({ open }) => (
+                        <>
+                          <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900">
+                            Product
+                            <ChevronDownIcon
+                              className={classNames(
+                                open ? "rotate-180" : "",
+                                "h-5 w-5 flex-none"
+                              )}
+                              aria-hidden="true"
+                            />
+                          </Disclosure.Button>
+                          <Disclosure.Panel className="mt-2 space-y-2">
+                            {products.map((item) => (
+                              <Disclosure.Button
+                                key={item.name}
+                                as="a"
+                                href={item.href}
+                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                              >
+                                {item.name}
+                              </Disclosure.Button>
+                            ))}
+                          </Disclosure.Panel>
+                        </>
+                      )}
+                    </Disclosure>
                     <a
-                      href="/orders"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      href="#"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      View Orders
+                      Features
                     </a>
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => handleLogout()}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      Logout
-                    </a>
-                  </>
-                ) : (
-                  <>
-                    <a
-                      href="/login"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
+                      Marketplace
                     </a>
                     <a
-                      href="/signup"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      href="#"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      Sign up
+                      Company
                     </a>
-                  </>
-                )}
+                  </div>
+                  <div className="py-6 space-y-4">
+                    {isAuthenticated ? (
+                      <>
+                        <a
+                          href="/orders"
+                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          View Orders
+                        </a>
+                        <a
+                          href="#"
+                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                          onClick={() => handleLogout()}
+                        >
+                          Logout
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <a
+                          href="/login"
+                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Log in
+                        </a>
+                        <a
+                          href="/signup"
+                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                          Sign up
+                        </a>
+                      </>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
+            </Dialog.Panel>
+          </Transition.Child>
+        </Dialog>
+      </Transition.Root>
     </header>
   );
 }
