@@ -8,7 +8,7 @@ const CartItemsList = (props: ICartItemsListProps) => {
   return (
     <ul
       role="list"
-      className="divide-y divide-gray-200 border-b border-t border-gray-200"
+      className="divide-y divide-gray-200 border-b border-t border-gray-200 ml-10"
     >
       {products.map((product, productIdx) => (
         <li key={product.id} className="flex py-6 sm:py-10">

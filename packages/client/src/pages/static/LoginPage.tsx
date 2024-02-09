@@ -11,7 +11,6 @@ const LoginPage = () => {
 
   const onSubmit = (data: any) => {
     console.log(data);
-    // Process login here
   };
 
   return (
@@ -104,7 +103,7 @@ const LoginPage = () => {
           </div>
         </form>
 
-        <p className="mt-10 text-center text-sm text-gray-500">
+        <p className="mt-8 text-center text-sm text-gray-500 flex justify-center items-center gap-2">
           Not a member?{" "}
           <a
             href="/signup"

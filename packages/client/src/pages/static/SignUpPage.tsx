@@ -19,7 +19,7 @@ const SignUpPage = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <Logo className="mx-auto h-10 w-auto"/>
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Log in to your account
+          Create an account
         </h2>
       </div>
 
@@ -104,13 +104,13 @@ const SignUpPage = () => {
           </div>
         </form>
 
-        <p className="mt-10 text-center text-sm text-gray-500">
-          Not a member?{" "}
+        <p className="mt-8 text-center text-sm text-gray-500 flex justify-center items-center gap-2">
+          Already a member?{" "}
           <a
-            href="/signup"
+            href="/login"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
           >
-            Sign Up!
+            Log in!
           </a>
         </p>
       </div>
