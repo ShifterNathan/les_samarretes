@@ -7,7 +7,7 @@ const ColumnWithLinks = (props: IColumnWithLinksProps) => {
 
   return (
     <div className='md:w-1/5 mb-4'>
-    <h5 className='font-bold sm:mb-4'>{title}</h5>
+    <h5 className='font-bold'>{title}</h5>
     <ul className='mt-4 text-sm font-medium'> 
         {links.map(link => {
             return (
