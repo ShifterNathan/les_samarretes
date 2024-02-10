@@ -265,31 +265,15 @@ function Header() {
         >
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-30" />
-          </Transition.Child>
-
-          <Transition.Child
-            as={Fragment}
             enter="transition ease-out duration-300"
             enterFrom="transform opacity-0 translate-x-full"
             enterTo="transform opacity-100 translate-x-0"
-            leave="transition ease-in duration-200"
+            leave="transition ease-out duration-300" // Adjusted duration and easing
             leaveFrom="transform opacity-100 translate-x-0"
-            leaveTo="transform opacity-0 translate-x-full"
+            leaveTo="transform opacity-0 -translate-x-full" 
           >
             <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-white p-6 sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
-                  <Logo className="h-8 w-auto" />
-                </a>
+              <div className="flex items-center justify-end">
                 <button
                   type="button"
                   className="-m-2.5 rounded-md p-2.5 text-gray-700"
