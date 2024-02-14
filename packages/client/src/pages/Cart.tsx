@@ -3,7 +3,6 @@ import { Dialog, Tab, Transition } from '@headlessui/react'
 import {
   XMarkIcon as XMarkIconOutline,
 } from '@heroicons/react/24/outline'
-import { CheckIcon, ClockIcon, QuestionMarkCircleIcon, XMarkIcon as XMarkIconMini } from '@heroicons/react/20/solid'
 import CartItemsList from '../components/cart/CartItemsList'
 import CartOrderSummary from '../components/cart/CartOrderSummary'
 
