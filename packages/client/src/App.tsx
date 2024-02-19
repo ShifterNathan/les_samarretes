@@ -6,6 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { UserProvider } from "./context/userContext.tsx";
+import TopBar from "./components/header/TopBar.tsx";
 
 const HomePage = React.lazy(() => import("./pages/HomePage.tsx"));
 const ErrorPage = React.lazy(() => import("./pages/static/ErrorPage.tsx"));
@@ -22,7 +23,6 @@ function App() {
     <UserProvider>
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
-          <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/stanleystella" element={<HomePage />} />

@@ -1,5 +1,5 @@
-import BackgroundAsImageWithCenteredContent from '../components/hero/BackgroundAsImageWithCenteredContent.tsx'
-import ProductList from '../components/productList/ProductList.tsx'
+import Header from "../components/header/Header";
+import TopBar from "../components/header/TopBar";
 
 const backgroundImages: {classname: string, upperText: string, lowerText: string, href: string}[] = [
   {
@@ -19,8 +19,8 @@ const backgroundImages: {classname: string, upperText: string, lowerText: string
 const HomePage = () => {
   return (
     <>
-        <BackgroundAsImageWithCenteredContent backgroundImages={backgroundImages}/>
-        <ProductList/>
+      <TopBar pages={null} />
+      <Header />
     </>
   )
 }
