@@ -8,6 +8,18 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+        '160': '40rem',
+        '172': '44rem',
+        '192': '48rem',
+        '400': '100rem',
+        '440': '110rem',
+        '480': '119rem',
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',

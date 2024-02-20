@@ -26,7 +26,7 @@ const DesktopMenu = (props: IDesktopMenuProps) => {
   };
   return (
     <>
-      <Popover.Group className="hidden lg:flex lg:gap-x-12">
+      <Popover.Group className="hidden lg:flex lg:gap-x-12 ml-4">
         <a href="/" className="text-md font-semibold leading-6 text-gray-900 hover:text-primary-500">
           Home
         </a>

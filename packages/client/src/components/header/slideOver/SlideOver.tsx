@@ -10,7 +10,7 @@ const SlideOver = (props: ICartSlideOverProps) => {
 
   return (
     <Transition.Root show={show} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={() => toggleSlideover("wishlist")}>
+      <Dialog as="div" className="relative z-50" onClose={() => toggleSlideover("wishlist")}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"

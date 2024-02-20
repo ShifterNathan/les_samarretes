@@ -6,11 +6,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import { UserProvider } from "./context/userContext.tsx";
-import TopBar from "./components/header/TopBar.tsx";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const HomePage = React.lazy(() => import("./pages/HomePage.tsx"));
 const ErrorPage = React.lazy(() => import("./pages/static/ErrorPage.tsx"));
-const Header = React.lazy(() => import("./components/header/Header.tsx"));
 const Footer = React.lazy(() => import("./components/footer/SimpleFiveColumn.tsx"));
 const LoginPage = React.lazy(() => import("./pages/static/LoginPage.tsx"));
 const PrivacyPolicy = React.lazy(() => import("./pages/static/GDPR/PrivacyPolicy.tsx"));

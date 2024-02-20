@@ -1,5 +1,6 @@
 import Header from "../components/header/Header";
 import TopBar from "../components/header/TopBar";
+import BackgroundAsImageWithCenteredContent from "../components/hero/BackgroundAsImageWithCenteredContent";
 
 const backgroundImages: {classname: string, upperText: string, lowerText: string, href: string}[] = [
   {
@@ -21,6 +22,7 @@ const HomePage = () => {
     <>
       <TopBar pages={null} />
       <Header />
+      <BackgroundAsImageWithCenteredContent backgroundImages={backgroundImages} />
     </>
   )
 }
