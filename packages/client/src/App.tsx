@@ -26,10 +26,11 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/stanleystella" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/shop" element={<div>Pagina de tienda</div>} />
+            <Route path="/shop/brand/:brandName" element={<div>Pagina de tienda filtrada por nombre de marca</div>} />
             <Route
               path="/privacypolicy"
               element={<PrivacyPolicy headingText="Privacy Policy" />}

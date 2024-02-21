@@ -19,7 +19,7 @@ const DesktopMenu = (props: IDesktopMenuProps) => {
     wishlist: false,
   });
 
-  const { products, company } = props;
+  const { products, brands } = props;
 
   const toggleSlideover = (type: SlideoverType) => {
     setIsSlideoverOpen({ ...isSlideoverOpen, [type]: !isSlideoverOpen[type] });
@@ -56,7 +56,7 @@ const DesktopMenu = (props: IDesktopMenuProps) => {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
-              {company.map((item) => (
+              {brands.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}

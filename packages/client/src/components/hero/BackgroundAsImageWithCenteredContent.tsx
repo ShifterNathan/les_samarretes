@@ -76,7 +76,7 @@ import Foreground from "./Foreground";
   const { upperText, lowerText } = backgroundImages[currentImageIndex];
 
   return (
-    <div id="hero-container" className="relative h-screen min-h-128 overflow-hidden">
+    <div id="hero-container" className="relative h-172 min-h-128 overflow-hidden">
       {/* Render background images with fade transitions */}
       {renderBackgroundImages()}
 

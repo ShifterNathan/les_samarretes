@@ -12,7 +12,7 @@ export interface IDesktopMenuProps {
         icon: any;
     }[];
 
-    company: {
+    brands: {
         name: string;
         href: string;
     }[];

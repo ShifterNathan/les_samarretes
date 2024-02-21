@@ -25,12 +25,10 @@ const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
-const company = [
-  { name: 'About us', href: '#' },
-  { name: 'Careers', href: '#' },
-  { name: 'Support', href: '#' },
-  { name: 'Press', href: '#' },
-  { name: 'Blog', href: '#' },
+const brands = [
+  { name: 'Stanley/Stella', href: '/brand/stanleyStella' },
+  { name: 'Roly', href: '/brand/roly' },
+  { name: 'Stamina', href: '/brand/stamina' },
 ]
 
 const Header = () => {
@@ -60,7 +58,7 @@ const Header = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <DesktopMenu products={products} callsToAction={callsToAction} company={company} />
+        <DesktopMenu products={products} callsToAction={callsToAction} brands={brands} />
       </nav>
       <MobileMenu show={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} isAuthenticated={isAuthenticated} handleLogout={handleLogout} />
     </header>
