@@ -6,8 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { UserProvider } from "./context/userContext.tsx";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 
 const HomePage = React.lazy(() => import("./pages/HomePage.tsx"));
