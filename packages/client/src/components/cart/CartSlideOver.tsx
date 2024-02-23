@@ -1,5 +1,5 @@
 import React from "react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ICartSlideOverProps } from "../../interfaces/Header/ICartSlideOverProps";
@@ -60,7 +60,6 @@ const CartSlideOver = (props: ICartSlideOverProps) => {
                       <div className="mt-8">
                         <div className="flow-root">
                           <ul
-                            role="list"
                             className="-my-6 divide-y divide-gray-200"
                           >
                             {products.map((product) => (
