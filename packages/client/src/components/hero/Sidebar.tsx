@@ -4,7 +4,7 @@ const Sidebar = (props: ISidebarHero) => {
   const { backgroundImages, currentImageIndex, handleSidebarItemClick } = props;
 
   return (
-    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 lg:z-50 md:z-50 flex flex-col items-center space-y-2">
+    <div className="hidden md:absolute md:flex right-0 top-1/2 transform -translate-y-1/2 lg:z-50 md:z-50 flex flex-col items-center space-y-2">
       {backgroundImages.map((_, index) => (
         <button
           key={index}
