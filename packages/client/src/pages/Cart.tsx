@@ -3,7 +3,6 @@ import { Dialog, Tab, Transition } from "@headlessui/react";
 import { XMarkIcon as XMarkIconOutline } from "@heroicons/react/24/outline";
 import CartItemsList from "../components/cart/CartItemsList";
 import CartOrderSummary from "../components/cart/CartOrderSummary";
-import TopBar from "../components/header/TopBar";
 import Header from "../components/header/Header";
 
 const navigation = {
@@ -188,8 +187,7 @@ export default function Cart() {
 
   return (
     <>
-      <TopBar pages={[{ name: "Cart", href: "/cart", current: true }]} />
-      <Header />
+      <Header pages={[{ name: "Cart", href: "/cart", current: true }]} />
       <div className="bg-white">
         <Transition.Root show={open} as={Fragment}>
           <Dialog
@@ -300,7 +298,6 @@ export default function Cart() {
                                 {section.name}
                               </p>
                               <ul
-                                role="list"
                                 aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
                                 className="mt-6 flex flex-col space-y-6"
                               >
@@ -346,26 +343,12 @@ export default function Cart() {
                     </div>
                     <div className="flow-root">
                       <a
-                        href="#"
+                        href="/signup"
                         className="-m-2 block p-2 font-medium text-gray-900"
                       >
                         Create account
                       </a>
                     </div>
-                  </div>
-
-                  <div className="border-t border-gray-200 px-4 py-6">
-                    <a href="#" className="-m-2 flex items-center p-2">
-                      <img
-                        src="https://tailwindui.com/img/flags/flag-canada.svg"
-                        alt=""
-                        className="block h-auto w-5 flex-shrink-0"
-                      />
-                      <span className="ml-3 block text-base font-medium text-gray-900">
-                        CAD
-                      </span>
-                      <span className="sr-only">, change currency</span>
-                    </a>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

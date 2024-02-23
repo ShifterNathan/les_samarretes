@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Logo from "../../common/Logo";
-import TopBar from "../../components/header/TopBar";
 import Header from "../../components/header/Header";
 
 const LoginPage = () => {
@@ -17,8 +16,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <TopBar pages={[{ name: "Login", href: "/login", current: true }]} />
-      <Header />
+      <Header pages={[{ name: "Login", href: "/login", current: true }]} />
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-16 lg:px-20">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Logo className="mx-auto h-10 w-auto" />

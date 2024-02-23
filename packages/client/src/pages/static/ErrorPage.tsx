@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import TopBar from '../../components/header/TopBar';
 import Header from '../../components/header/Header';
 
 
@@ -12,7 +11,7 @@ const ErrorPage = () => {
 
   return (
     <>
-      <Header/>
+      <Header pages={null}/>
       <div className='flex items-center justify-center h-screen bg-gray-100'>
         <div className='text-center p-10  bg-white rounded-lg shadow-lg max-w-md mb-32'>
           <h1 className='text-6xl font-bold text-primary-500'>404</h1>

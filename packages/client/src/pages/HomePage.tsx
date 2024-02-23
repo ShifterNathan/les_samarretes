@@ -1,6 +1,6 @@
 import Header from "../components/header/Header";
-import TopBar from "../components/header/TopBar";
 import BackgroundAsImageWithCenteredContent from "../components/hero/BackgroundAsImageWithCenteredContent";
+import MasonryGrid from "../components/masonryGrid/MasonryGrid";
 
 const backgroundImages: {classname: string, upperText: string, lowerText: string, href: string}[] = [
   {
@@ -20,9 +20,12 @@ const backgroundImages: {classname: string, upperText: string, lowerText: string
 const HomePage = () => {
   return (
     <>
-      <TopBar pages={null} />
-      <Header />
+      <Header pages={null} />
       <BackgroundAsImageWithCenteredContent backgroundImages={backgroundImages} />
+      <div className="mt-32">
+      <MasonryGrid />
+      </div>
+
     </>
   )
 }
