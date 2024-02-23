@@ -8,7 +8,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { useAuth } from "../../context/userContext";
-import CartSlideOver from "./slideOver/CartSlideOver";
+import CartSlideOver from "../cart/CartSlideOver";
 import SlideOver from "./slideOver/SlideOver";
 
 const DesktopMenu = (props: IDesktopMenuProps) => {

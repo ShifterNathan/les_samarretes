@@ -2,7 +2,7 @@ import React from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { ICartSlideOverProps } from "../../../interfaces/Header/ICartSlideOverProps";
+import { ICartSlideOverProps } from "../../interfaces/Header/ICartSlideOverProps";
 import { useNavigate } from "react-router-dom";
 
 
