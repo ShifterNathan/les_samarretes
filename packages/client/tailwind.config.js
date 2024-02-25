@@ -437,17 +437,6 @@ module.exports = {
       '0': '0',
       full: '100%',
     },
-    objectPosition: {
-      bottom: 'bottom',
-      center: 'center',
-      left: 'left',
-      'left-bottom': 'left bottom',
-      'left-top': 'left top',
-      right: 'right',
-      'right-bottom': 'right bottom',
-      'right-top': 'right top',
-      top: 'top',
-    },
     opacity: {
       '0': '0',
       '5': '0.05',

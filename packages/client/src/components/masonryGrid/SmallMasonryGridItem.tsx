@@ -1,9 +1,9 @@
 import {
   HeartIcon,
-  ShoppingCartIcon,
   EyeIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from 'react';
+import HoverIconWithTooltip from "./HoverIconWithTooltip";
 
 const SmallMasonryGridItem = (props: any) => {
   const { imgSrc } = props;
@@ -12,7 +12,7 @@ const SmallMasonryGridItem = (props: any) => {
   return (
     <div className="lg:col-span-2 lg:row-span-1 col-span-6 row-span-2">
       <div
-        className="w-full lg:h-64 h-56 hover:cursor-pointer object-cover bg-cover hover:scale-110 transition-transform duration-500 ease-in-out relative"
+        className="w-full h-64 hover:cursor-pointer object-cover bg-cover md:hover:scale-110 transition-transform duration-500 ease-in-out relative"
         style={{
           backgroundImage: `url(${imgSrc})`,
           backgroundRepeat: 'no-repeat',
@@ -21,10 +21,9 @@ const SmallMasonryGridItem = (props: any) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {isHovered && (
-          <div className="absolute bottom-0 left-0 right-0 flex justify-around p-2 bg-black bg-opacity-50 animate-fade-in animate-duration-300">
-            <button className="bg-white p-2 rounded-full hover:bg-gray-200 hover:text-primary-500"><EyeIcon className='h-6 w-6'/></button>
-            <button className="bg-white p-2 rounded-full hover:bg-gray-200 hover:text-primary-500"><ShoppingCartIcon className='h-6 w-6'/></button>
-            <button className="bg-white p-2 rounded-full hover:bg-gray-200 hover:text-primary-500"><HeartIcon className='h-6 w-6'/></button>
+          <div className="hidden md:flex absolute top-0 left-0 right-0 justify-around p-2 bg-black bg-opacity-50 animate-fade-in animate-duration-300">
+            <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" />
+            <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" />
           </div>
         )}
       </div>
