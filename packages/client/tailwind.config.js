@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+import animations from '@midudev/tailwind-animations'
+
+
 module.exports = {
   content: [
     "./index.html",
@@ -801,7 +805,8 @@ module.exports = {
   corePlugins: {},
   plugins: [
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    animations
   ],
 }
 
