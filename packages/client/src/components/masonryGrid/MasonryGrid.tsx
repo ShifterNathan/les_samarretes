@@ -34,7 +34,7 @@ const MasonryGrid = () => {
           className="w-full grid grid-cols-12 auto-rows-auto gap-4 mx-auto px-4"
           style={{ maxWidth: "1400px" }}
         >
-          <SmallMasonryGridItem imgSrc={imageSources[0]}/>
+          <SmallMasonryGridItem imgSrc={imageSources[0]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
           <SmallMasonryGridItem imgSrc={imageSources[1]}/>
           <SmallMasonryGridItem imgSrc={imageSources[2]}/>
           <BigMasonryGridItem imgSrc={imageSources[3]}/>
