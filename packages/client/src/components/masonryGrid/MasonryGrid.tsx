@@ -31,25 +31,25 @@ const MasonryGrid = () => {
     return (
       <div className="flex items-center justify-center">
         <div
-          className="w-full grid grid-cols-12 auto-rows-auto gap-4 mx-auto px-4"
+          className="w-full grid grid-cols-12 auto-rows-auto gap-4 mx-10 px-4"
           style={{ maxWidth: "1400px" }}
         >
           <SmallMasonryGridItem imgSrc={imageSources[0]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
-          <SmallMasonryGridItem imgSrc={imageSources[1]}/>
-          <SmallMasonryGridItem imgSrc={imageSources[2]}/>
-          <BigMasonryGridItem imgSrc={imageSources[3]}/>
-          <BigMasonryGridItem imgSrc={imageSources[4]}/>
-          <SmallMasonryGridItem imgSrc={imageSources[5]}/>
-          <SmallMasonryGridItem imgSrc={imageSources[6]}/>
-          <SmallMasonryGridItem imgSrc={imageSources[7]}/>
-          <SmallMasonryGridItem imgSrc={imageSources[8]}/>
-          <SmallMasonryGridItem imgSrc={imageSources[9]} />
-          <SmallMasonryGridItem imgSrc={imageSources[10]} />
-          <BigMasonryGridItem imgSrc={imageSources[11]} />
-          <BigMasonryGridItem imgSrc={imageSources[12]} />
-          <SmallMasonryGridItem imgSrc={imageSources[13]} />
-          <SmallMasonryGridItem imgSrc={imageSources[14]} />
-          <SmallMasonryGridItem imgSrc={imageSources[15]} />
+          <SmallMasonryGridItem imgSrc={imageSources[1]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <SmallMasonryGridItem imgSrc={imageSources[2]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <BigMasonryGridItem imgSrc={imageSources[3]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <BigMasonryGridItem imgSrc={imageSources[4]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <SmallMasonryGridItem imgSrc={imageSources[5]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <SmallMasonryGridItem imgSrc={imageSources[6]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <SmallMasonryGridItem imgSrc={imageSources[7]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <SmallMasonryGridItem imgSrc={imageSources[8]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
+          <SmallMasonryGridItem imgSrc={imageSources[9]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
+          <SmallMasonryGridItem imgSrc={imageSources[10]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
+          <BigMasonryGridItem imgSrc={imageSources[11]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
+          <BigMasonryGridItem imgSrc={imageSources[12]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
+          <SmallMasonryGridItem imgSrc={imageSources[13]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
+          <SmallMasonryGridItem imgSrc={imageSources[14]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
+          <SmallMasonryGridItem imgSrc={imageSources[15]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"} />
         </div>
       </div>
     );

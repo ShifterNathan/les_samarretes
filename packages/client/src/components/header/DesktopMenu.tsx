@@ -27,18 +27,18 @@ const DesktopMenu = (props: IDesktopMenuProps) => {
   return (
     <>
       <Popover.Group className="hidden lg:flex lg:gap-x-12 ml-4">
-        <a href="/" className="text-md font-semibold leading-6 text-gray-900 hover:text-primary-500">
+        <a href="/" className="text-md font-semibold leading-6 text-gray-900 hover:text-primary-500 transition-colors duration-200">
           Home
         </a>
         <a
           href="/shop"
-          className="text-md font-semibold leading-6 text-gray-900 hover:text-primary-500"
+          className="text-md font-semibold leading-6 text-gray-900 hover:text-primary-500 transition-colors duration-200"
         >
           Shop
         </a>
 
         <Popover>
-          <Popover.Button className="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900 hover:text-primary-500">
+          <Popover.Button className="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900 hover:text-primary-500 transition-colors duration-200">
             Marcas
             <ChevronDownIcon
               className="h-5 w-5 flex-none text-gray-400"
@@ -55,12 +55,12 @@ const DesktopMenu = (props: IDesktopMenuProps) => {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
+            <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
               {brands.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
+                  className="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50 hover:text-primary-500 transition-colors duration-200"
                 >
                   {item.name}
                 </a>

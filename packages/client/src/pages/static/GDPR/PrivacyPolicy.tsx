@@ -45,7 +45,7 @@ const PrivacyPolicy = (props: IGDPRProps) => {
             </p>
             <ul className="list-disc list-inside">
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose mt-0 inline leading-normal">
+                <p className="mt-2 leading-loose inline">
                   <strong>You</strong> means the individual accessing or using
                   the Service, or the company, or other legal entity on behalf
                   of which such individual is accessing or using the Service, as
@@ -53,7 +53,7 @@ const PrivacyPolicy = (props: IGDPRProps) => {
                 </p>
               </li>
               <li className="ml-2 mb-3">
-                <p className="mt-2 leading-loose mt-0 inline leading-normal">
+                <p className="mt-2 leading-loose inline">
                   <strong>Company</strong> (referred to as either "the Company",
                   "We", "Us" or "Our" in this Agreement) refers to Treact.
                 </p>

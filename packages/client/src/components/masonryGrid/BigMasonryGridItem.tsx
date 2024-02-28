@@ -8,10 +8,10 @@ import HoverIconWithTooltip from "./HoverIconWithTooltip";
 const BigMasonryGridItem = (props: any) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const { imgSrc } = props;
+  const { imgSrc, title, description, priceRange } = props;
   return (
     <div
-      className="col-span-6 row-span-2 w-full lg:h-192 h-64 hover:cursor-pointer md:hover:scale-105 hover:transition-transform hover:z-50 duration-500 ease-in-out"
+      className="col-span-6 row-span-2 w-full lg:h-192 h-64 hover:cursor-pointer md:hover:scale-105 hover:transition-transform hover:z-50 duration-500 ease-in-out relative lg:flex lg:flex-col lg:justify-between"
       style={{
         backgroundImage: `url(${imgSrc})`,
         backgroundSize: "cover",
@@ -20,12 +20,19 @@ const BigMasonryGridItem = (props: any) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {isHovered && (
-        <div className="absolute top-0 left-0 right-0 flex justify-around p-2 bg-black bg-opacity-50 animate-fade-in animate-duration-300">
-          <HoverIconWithTooltip Icon={EyeIcon} iconClass={'h-6 w-6'} tooltipText="View" />
-          <HoverIconWithTooltip Icon={HeartIcon} iconClass={'h-6 w-6'} tooltipText="Like" />
-        </div>
-      )}
+        {isHovered && (
+          <>
+            <div className="hidden md:flex justify-around p-2 bg-white animate-fade-in animate-duration-300">
+              <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" />
+              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" />
+            </div>
+            <div className="hidden md:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-40">
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <p className="text-sm text-gray-600">{description}</p>
+              <p className="text-sm">{priceRange}</p>
+            </div>
+          </>
+        )}
     </div>
   );
 };

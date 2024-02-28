@@ -14,7 +14,7 @@ const Foreground = (props: IForegroundHero) => {
               {lowerText}
             </span>
           </h1>
-          <button className="rounded-full px-8 py-3 mt-10 text-sm sm:text-base lg:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hover:bg-primary-600 hover:text-gray-200 focus:outline-none focus:shadow-outline" onClick={handleButton}>
+          <button className="rounded-full px-8 py-3 mt-10 text-sm sm:text-base lg:mt-16 sm:px-8 sm:py-4 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hover:bg-primary-600 hover:text-gray-200 focus:outline-none focus:shadow-outline" onClick={handleButton}>
             Ver mas
           </button>
         </div>

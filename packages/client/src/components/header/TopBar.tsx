@@ -18,7 +18,7 @@ export default function TopBar(props: ITopBarProps) {
         className="flex justify-between items-center border-b border-gray-200 w-full pb-2 pt-2"
         aria-label="Breadcrumb"
       >
-        <ol className="flex items-center space-x-4 ml-10">
+        <ol className="flex items-center space-x-4 ml-6 md:ml-10">
           <li>
             <div>
               <a href="/" className="text-gray-500 hover:text-gray-500">
@@ -54,11 +54,11 @@ export default function TopBar(props: ITopBarProps) {
         </ol>
         <button
           onClick={togglePopover}
-          className="flex items-center justify-center hover:text-primary-500 gap-2 mr-10"
+          className="flex items-center justify-center hover:text-primary-500 transition-colors duration-200 gap-2 mr-6 md:mr-10"
           aria-label="Iniciar sesión / registrarse"
         >
-          <UserCircleIcon className="h-8 w-8" />
-          <span className="text-sm">Iniciar sesión / registrarse</span>
+          <UserCircleIcon className="h-6 w-6 md:h-8 md:w-8" />
+          <span className="text-xs md:text-sm">Iniciar sesión / registrarse</span>
         </button>
 
         <PopOverHeader show={isPopoverOpen} togglePopover={togglePopover} />
