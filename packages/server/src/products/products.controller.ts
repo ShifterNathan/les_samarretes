@@ -17,7 +17,7 @@ export class ProductsController {
 
   @Post()
   saveProductsData(productsDataSetConst: typeof ProductsDataSetConst) {
-    return this.productsService.saveProductsData(productsDataSetConst);
+    return this.productsService.saveProductsData();
   }
 
   @Get()

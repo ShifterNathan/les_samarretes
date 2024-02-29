@@ -5,10 +5,10 @@ import { ApiProperty } from '@nestjs/swagger';
 @Schema()
 export class Product extends Document {
   @ApiProperty({
-    example: 'fr_FR',
+    example: 'es_ES',
     description: 'Language code of the product',
   })
-  @Prop({ type: String, required: false })
+  @Prop({ type: String, required: true })
   languageCode: string;
 
   @ApiProperty({ example: 'STTU755C5042S', description: 'B2B SKU reference' })
@@ -16,7 +16,7 @@ export class Product extends Document {
   B2BSKUREF: string;
 
   @ApiProperty({ example: 'STTU755', description: 'Style code of the product' })
-  @Prop({ type: String, required: false, unique: true })
+  @Prop({ type: String, required: false, unique: false })
   styleCode: string;
 
   @ApiProperty({ example: 'C504', description: 'Color code of the product' })
@@ -39,7 +39,7 @@ export class Product extends Document {
     example: 'Vintage White',
     description: 'Color of the product',
   })
-  @Prop({ type: String, required: false })
+  @Prop({ type: String, required: true })
   color: string;
 
   @ApiProperty({ example: 'Whites', description: 'Color group of the product' })
@@ -47,11 +47,11 @@ export class Product extends Document {
   colorGroup: string;
 
   @ApiProperty({ example: 'T-shirt', description: 'Type of the product' })
-  @Prop({ type: String, required: false })
+  @Prop({ type: String, required: true })
   type: string;
 
   @ApiProperty({ example: 'Tees', description: 'Category of the product' })
-  @Prop({ type: String, required: false })
+  @Prop({ type: String, required: true })
   category: string;
 
   @ApiProperty({ example: 'Unisex', description: 'Gender of the product' })
@@ -59,7 +59,7 @@ export class Product extends Document {
   gender: string;
 
   @ApiProperty({ example: '719', description: 'Stock of the product' })
-  @Prop({ type: Number, required: false })
+  @Prop({ type: Number, required: true })
   stock: number;
 
   @ApiProperty({ example: '', description: 'Fit of the product' })
@@ -156,14 +156,6 @@ export class Product extends Document {
   @Prop({ type: Number, required: false })
   OEKOTexRecycled: number;
 
-  @ApiProperty({ example: "1", description: "Ecotex certification status" })
-  @Prop({ type: Number, required: false })
-  Ecotex: number;
-
-  @ApiProperty({ example: "1", description: "Fairwear certification status" })
-  @Prop({ type: Number, required: false })
-  Fairwear: number;
-
   @ApiProperty({ example: "0", description: "CarbonNeutral certification status" })
   @Prop({ type: Number, required: false })
   CarbonNeutral: number;
@@ -225,26 +217,6 @@ export class Product extends Document {
   HSCode: string;
 
   @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K3EUR: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K15EUR: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K30EUR: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K50EUR: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K100EUR: string;
-
-  @ApiProperty({ example: "", description: '' })
   @Prop({ type: Number, required: false })
   priceLessThan10EUR: number;
 
@@ -279,27 +251,6 @@ export class Product extends Document {
   @ApiProperty({ example: "", description: '' })
   @Prop({ type: Number, required: false })
   mediumBrandEUR: number;
-
-  
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K3GBP: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K15GBP: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K30GBP: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K50GBP: string;
-
-  @ApiProperty({ example: "", description: '' })
-  @Prop({ type: String, required: false })
-  K100GBP: string;
 
   @ApiProperty({ example: "", description: '' })
   @Prop({ type: Number, required: false })
@@ -441,14 +392,6 @@ export class Product extends Document {
   @Prop({ type: Number, required: false })
   grs100Poly: number;
 
-  @ApiProperty({ example: 0, description: "GRS" })
-  @Prop({ type: Number, required: false })
-  GRS: number;
-
-  @ApiProperty({ example: true, description: "VEGAN" })
-  @Prop({ type: Boolean, required: false })
-  VEGAN: boolean;
-
   @ApiProperty({ example: 0, description: "GOTS85" })
   @Prop({ type: Number, required: false })
   GOTS85: number;
@@ -493,46 +436,6 @@ export class Product extends Document {
   @Prop({ type: Number, required: false })
   liningWeight: number;
 
-  @ApiProperty({ example: "", description: 'Fourth layer name of the product' })
-  @Prop({ type: String, required: false })
-  layer4Name: string;
-
-  @ApiProperty({ example: "", description: 'Composition of the fourth layer' })
-  @Prop({ type: String, required: false })
-  layer4Composition: string;
-
-  @ApiProperty({ example: "", description: 'Construction of the fourth layer' })
-  @Prop({ type: String, required: false })
-  layer4Construction: string;
-
-  @ApiProperty({ example: "", description: 'Finishing of the fourth layer' })
-  @Prop({ type: String, required: false })
-  layer4Finishing: string;
-
-  @ApiProperty({ example: 0.0, description: 'Weight of the fourth layer in grams' })
-  @Prop({ type: Number, required: false })
-  layer4Weight: number;
-
-  @ApiProperty({ example: "", description: 'Fifth layer name of the product' })
-  @Prop({ type: String, required: false })
-  layer5Name: string;
-
-  @ApiProperty({ example: "", description: 'Composition of the fifth layer' })
-  @Prop({ type: String, required: false })
-  layer5Composition: string;
-
-  @ApiProperty({ example: "", description: 'Construction of the fifth layer' })
-  @Prop({ type: String, required: false })
-  layer5Construction: string;
-
-  @ApiProperty({ example: "", description: 'Finishing of the fifth layer' })
-  @Prop({ type: String, required: false })
-  layer5Finishing: string;
-
-  @ApiProperty({ example: 0.0, description: 'Weight of the fifth layer in grams' })
-  @Prop({ type: Number, required: false })
-  layer5Weight: number;
-
   @ApiProperty({ example: "", description: 'Style notice of the product' })
   @Prop({ type: String, required: false })
   styleNotice: string;
@@ -548,8 +451,77 @@ export class Product extends Document {
   @ApiProperty({ example: "", description: 'Product specifications' })
   @Prop({ type: String, required: false })
   specifications: string;
+
+  @ApiProperty({ example: 1, description: 'Product certifications' })
+  @Prop({ type: Number, required: false })
+  publishedNewCollection: number;
+
+  @ApiProperty({ example: true, description: 'Product certifications' })
+  @Prop({ type: Boolean, required: false })
+  stylePublishedNewCollection: boolean;
+
+  @ApiProperty({ example: 0, description: 'Product certifications' })
+  @Prop({ type: Number, required: false })
+  certificationTriman: number;
+
+  @ApiProperty({ example: 0, description: 'Product certifications' })
+  @Prop({ type: Number, required: false })
+  OEKOTexOrganic: number;
+
+  @ApiProperty({ example: 'https://res.cloudinary.com/www-stanleystella-com/image/upload/v1679392718/Product%20Content/Certifications/GOTS85.png', description: 'Product certifications' })
+  @Prop({ type: String, required: false })
+  ecoClassLogoURL: string;
+
+  @ApiProperty({ example: 'Made with 85% organic cotton', description: 'Product certifications' })
+  @Prop({ type: String, required: false })
+  ecoClassAlternateLogoText: string;
+
+  @ApiProperty({ example: 'https://asset.cloudinary.com/www-stanleystella-com/047cd8cca9c7b3005cb6045625f3fdca', description: 'Product certifications' })
+  @Prop({ type: String, required: false })
+  ecoClassCertificatePDF: string;
+
+  @ApiProperty({ example: 'https://res.cloudinary.com/www-stanleystella-com/image/upload/v1679392720/Product%20Content/Certifications/OekoTex2012163.png', description: 'Product certifications' })
+  @Prop({ type: String, required: false })
+  OEKOTexLogoURL: string;
+
+  @ApiProperty({example: 'OEKO-Tex organic garment', description: 'Product certifications'})
+  @Prop({ type: String, required: false})
+  OEKOTexAlternateLogoText: string;
+
+  @ApiProperty({example: 'https://res.cloudinary.com/www-stanleystella-com/image/upload/v1679392720/Product%20Content/Certifications/OekoTex2012163.png', description: 'Product certifications'})
+  @Prop({ type: String, required: false})
+  OEKOTexCertificatePDF: string;
+
+  @ApiProperty({ example: true, description: "VEGAN" })
+  @Prop({ type: Boolean, required: false })
+  vegan: boolean;
+
+  @ApiProperty({ example: "https://res.cloudinary.com/www-stanleystella-com/image/upload/v1679392720/Product%20Content/Certifications/PETAVegan.png", description: "VEGAN" })
+  @Prop({ type: String, required: false })
+  vegan_URL: string;
+
+  @ApiProperty({ example: "Vegan", description: "Vegan alternate logo text" })
+  veganAlternateLogoText
+
+  @ApiProperty({ example: "https://res.cloudinary.com/www-stanleystella-com/image/upload/v1681718119/Marketing%20Content/API/Sustainability/STANLEYSTELLA_PETA_Certificate_2023_2024.pdf", description: "Vegan certificate PDF" })
+  @Prop({ type: String, required: false })
+  veganCertificatePDF
+
+  @ApiProperty({ example: "1", description: "Fairwear certification" })
+  @Prop({ type: Number, required: false })
+  fairwear: number;
+
+  @ApiProperty({ example: "https://res.cloudinary.com/www-stanleystella-com/image/upload/v1679392718/Product%20Content/Certifications/Fairwear.png", description: "Fairwear " })
+  @Prop({ type: String, required: false })
+  fairwear_URL: string;
+
+  @ApiProperty({ example: "Fairwear", description: "Fairwear alternate logo text" })
+  @Prop({ type: String, required: false })
+  fairwearAlternateLogoText: string;
+
+  @ApiProperty({ example: "https://www.fairwear.org/brands/stanley-and-stella", description: "Fairwear certificate PDF" })
+  fairwearCertificatePDF: string;
 }
 
 export type ProductDocument = HydratedDocument<Product>;
-
 export const ProductSchema = SchemaFactory.createForClass(Product);
