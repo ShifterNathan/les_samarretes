@@ -4,9 +4,28 @@ import {
 } from "@heroicons/react/24/outline";
 import { useState } from 'react';
 import HoverIconWithTooltip from "./HoverIconWithTooltip";
+import { useNavigate } from "react-router-dom";
+import MasonryItemProductPopover from "./MasonryItemProductPopover";
 
 const BigMasonryGridItem = (props: any) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [showProductPopover, setShowProductPopover] = useState(false);
+  const navigate = useNavigate();
+
+  const togglePopover = () => {
+    setShowProductPopover(!showProductPopover);
+  }
+
+  const handleNavigation = (e: any, action: any, path?: any) => {
+    e.stopPropagation();
+    if (action === "popover") {
+      togglePopover();
+    } else if (action === "wishlist") {
+      console.log("Add to wishlist");
+    } else {
+      navigate(path);
+    }
+  }
 
   const { imgSrc, title, description, priceRange } = props;
   return (
@@ -23,8 +42,8 @@ const BigMasonryGridItem = (props: any) => {
         {isHovered && (
           <>
             <div className="hidden md:flex justify-around p-2 bg-white animate-fade-in animate-duration-300">
-              <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" />
-              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" />
+            <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" handleClick={handleNavigation} popover={true} />
+              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" handleClick={handleNavigation} />
             </div>
             <div className="hidden md:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-40">
               <h3 className="text-lg font-semibold">{title}</h3>
@@ -33,6 +52,8 @@ const BigMasonryGridItem = (props: any) => {
             </div>
           </>
         )}
+                <MasonryItemProductPopover showProductPopover={showProductPopover} setShowProductPopover={togglePopover} />
+
     </div>
   );
 };

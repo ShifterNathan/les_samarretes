@@ -22,12 +22,6 @@ const MasonryGrid = () => {
     "https://source.unsplash.com/random/16",
   ];
 
-  useEffect(() => {
-    setTimeout(() => {
-      console.log("MasonryGrid rendered");
-    }, 500)
-  })
-
     return (
       <div className="flex items-center justify-center">
         <div

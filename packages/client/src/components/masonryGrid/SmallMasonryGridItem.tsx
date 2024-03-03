@@ -2,16 +2,37 @@ import { HeartIcon, EyeIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import HoverIconWithTooltip from "./HoverIconWithTooltip";
 import { useNavigate } from "react-router-dom";
+import MasonryItemProductPopover from "./MasonryItemProductPopover";
 
 const SmallMasonryGridItem = (props: any) => {
   const { imgSrc, title, description, priceRange } = props;
   const [isHovered, setIsHovered] = useState(false);
+  const [showProductPopover, setShowProductPopover] = useState(false);
   const navigate = useNavigate();
 
-  const handleIconClick = (e: any, path: any) => {
-    e.stopPropagation(); // This stops the click from triggering the parent's onClick
-    navigate(path);
-  };
+  console.log(isHovered);
+  
+  const togglePopover = () => {
+    setShowProductPopover(!showProductPopover);
+  }
+
+  const handleNavigation = (e: any, action: any, path?: any) => {
+    e.stopPropagation();
+  
+    switch (action) {
+      case "popover":
+        togglePopover();
+        setIsHovered(false);
+        break;
+      case "wishlist":
+        console.log("Add to wishlist");
+        setIsHovered(false);
+        break;
+      default:
+        navigate(path);
+    }
+  }
+  
 
   return (
     <div className="lg:col-span-2 lg:row-span-1 col-span-6 row-span-2">
@@ -23,13 +44,13 @@ const SmallMasonryGridItem = (props: any) => {
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={() => navigate("/cart")}
-      >
+        onClick={(e) => handleNavigation(e, "bg", "/product/1")}
+        >
         {isHovered && (
           <>
             <div className="hidden md:flex justify-around p-2 bg-white animate-fade-in animate-duration-300 z-50">
-              <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" handleClick={handleIconClick} />
-              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" handleClick={handleIconClick} />
+              <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" handleClick={handleNavigation} popover={true} />
+              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" handleClick={handleNavigation} />
             </div>
             <div className="hidden md:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-20">
               <h3 className="text-lg font-semibold">{title}</h3>
@@ -38,6 +59,7 @@ const SmallMasonryGridItem = (props: any) => {
             </div>
           </>
         )}
+        <MasonryItemProductPopover showProductPopover={showProductPopover} setShowProductPopover={togglePopover} />
       </div>
     </div>
   );
