@@ -58,7 +58,6 @@ const SlideOver = (props: ICartSlideOverProps) => {
                       <div className="mt-8">
                         <div className="flow-root">
                           <ul
-                            role="list"
                             className="-my-6 divide-y divide-gray-200"
                           >
                             {products.map((product) => (

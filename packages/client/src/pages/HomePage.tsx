@@ -1,6 +1,7 @@
 import Header from "../components/header/Header";
 import BackgroundAsImageWithCenteredContent from "../components/hero/BackgroundAsImageWithCenteredContent";
 import MasonryGrid from "../components/masonryGrid/MasonryGrid";
+import ProductByFilterGrid from "../components/productByFilterGrid/ProductByFilterGrid";
 
 const backgroundImages: {classname: string, upperText: string, lowerText: string, href: string}[] = [
   {
@@ -22,9 +23,12 @@ const HomePage = () => {
     <>
       <Header pages={null} />
       <BackgroundAsImageWithCenteredContent backgroundImages={backgroundImages} />
-      <div className="mt-32">
-      <MasonryGrid />
-      </div>
+      <section className="mt-32">
+        <MasonryGrid />
+      </section>
+      <section className="mt-32">
+        <ProductByFilterGrid />
+      </section>
 
     </>
   )

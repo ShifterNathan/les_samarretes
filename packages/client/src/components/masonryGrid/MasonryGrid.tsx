@@ -1,6 +1,5 @@
 import SmallMasonryGridItem from "./SmallMasonryGridItem";
 import BigMasonryGridItem from "./BigMasonryGridItem";
-import { useEffect } from "react";
 
 const MasonryGrid = () => {
   const imageSources = [

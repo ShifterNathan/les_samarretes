@@ -9,11 +9,10 @@ const SmallMasonryGridItem = (props: any) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showProductPopover, setShowProductPopover] = useState(false);
   const navigate = useNavigate();
-
-  console.log(isHovered);
   
   const togglePopover = () => {
     setShowProductPopover(!showProductPopover);
+    setIsHovered(false);
   }
 
   const handleNavigation = (e: any, action: any, path?: any) => {
@@ -22,11 +21,9 @@ const SmallMasonryGridItem = (props: any) => {
     switch (action) {
       case "popover":
         togglePopover();
-        setIsHovered(false);
         break;
       case "wishlist":
         console.log("Add to wishlist");
-        setIsHovered(false);
         break;
       default:
         navigate(path);
