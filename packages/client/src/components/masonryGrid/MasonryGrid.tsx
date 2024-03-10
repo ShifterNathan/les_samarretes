@@ -24,8 +24,7 @@ const MasonryGrid = () => {
     return (
       <div className="flex items-center justify-center">
         <div
-          className="w-11/12 grid grid-cols-12 auto-rows-auto gap-4"
-          style={{ maxWidth: "1400px" }}
+          className="w-9/12 grid grid-cols-12 auto-rows-auto gap-4"
         >
           <SmallMasonryGridItem imgSrc={imageSources[0]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>
           <SmallMasonryGridItem imgSrc={imageSources[1]} title={"Test"} description={"Test description"} priceRange={"36.75 - 42.15  IVA"}/>

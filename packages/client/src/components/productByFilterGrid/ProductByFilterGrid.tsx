@@ -1,16 +1,84 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import ProductFilterGridItem from "./ProductFilterGridItem";
 
 const ProductByFilterGrid = (props: any) => {
   const { className } = props;
+
+  type TabsRef = {
+    [key: string]: HTMLButtonElement | null;
+  };
+
+  const [activeTab, setActiveTab] = useState("ALL");
+  const [underlineStyle, setUnderlineStyle] = useState({});
+  const tabsRef = useRef<TabsRef>({});
+  const tabs = ["ALL", "WOMAN", "MAN", "ON SALE", "NEW"];
+
+  const updateUnderlineStyle = (tab: any) => {
+    const tabRef = tabsRef.current[tab];
+    const styles = {
+      left: tabRef?.offsetLeft + "px",
+      width: tabRef?.offsetWidth + "px",
+    };
+    setUnderlineStyle(styles);
+  };
+
+  useEffect(() => {
+    updateUnderlineStyle(activeTab);
+  }, [activeTab]);
+
+  const imageSources = [
+    "https://source.unsplash.com/random/1",
+    "https://source.unsplash.com/random/2",
+    "https://source.unsplash.com/random/3",
+    "https://source.unsplash.com/random/4",
+    "https://source.unsplash.com/random/5",
+    "https://source.unsplash.com/random/6",
+    "https://source.unsplash.com/random/7",
+    "https://source.unsplash.com/random/8",
+    "https://source.unsplash.com/random/9",
+    "https://source.unsplash.com/random/10",
+    "https://source.unsplash.com/random/11",
+    "https://source.unsplash.com/random/12",
+
+  ];
+
   return (
-    <div className={`w-11/12 flex flex-col items-center justify-center ${className}`}>
-        <div className="flex">
-            <button type="button" className="text-gray-600 hover:text-black border border-primary-500 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center" >Hola</button>
-            <button type="button" className="text-gray-600 hover:text-black px-5 py-2.5 text-center border-primary-500" >Hola</button>
-            <button type="button" className="text-gray-600 hover:text-black px-5 py-2.5 text-center border-primary-500" >Hola</button>
-            <button type="button" className="text-gray-600 hover:text-black px-5 py-2.5 text-center border-primary-500" >Hola</button>
-            <button type="button" className="text-gray-600 hover:text-black px-5 py-2.5 text-center border-primary-500 focus:underline" >Hola</button>
+    <div
+      className={`w-9/12 flex flex-col items-center justify-center ${className}`}
+      style={{ maxWidth: "1400px" }}
+    >
+      <h3 className="text-3xl font-bold">Trendy Item</h3>
+      <div className="relative p-4">
+        <div className="flex space-x-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              ref={(el) => (tabsRef.current[tab] = el)}
+              className={`pb-2 ${
+                activeTab === tab
+                  ? "text-black"
+                  : "text-gray-400 hover:text-black"
+              }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
+        <div
+          className="absolute h-1 bg-black transition-all duration-300 ease-out"
+          style={{ ...underlineStyle }}
+        />
+      </div>
+      <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-auto `}>
+       {
+        imageSources.map((imgSrc, i) => {
+          return (
+            <ProductFilterGridItem imgSrc={imgSrc}/>
+          )
+        })
+       }
+      </div>
     </div>
   );
 };
