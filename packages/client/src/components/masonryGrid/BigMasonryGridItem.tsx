@@ -28,7 +28,7 @@ const BigMasonryGridItem = (props: any) => {
   const { imgSrc, title, description, priceRange } = props;
   return (
     <div
-      className="col-span-6 row-span-2 w-full lg:h-192 h-64 hover:cursor-pointer md:hover:scale-105 hover:transition-transform hover:z-50 duration-500 ease-in-out relative lg:flex lg:flex-col lg:justify-between"
+      className="col-span-6 row-span-2 w-full h-96 md:h-144 lg:h-192 hover:cursor-pointer md:hover:scale-105 hover:transition-transform hover:z-50 duration-500 ease-in-out relative lg:flex lg:flex-col lg:justify-between"
       style={{
         backgroundImage: `url(${imgSrc})`,
         backgroundSize: "cover",
@@ -53,7 +53,7 @@ const BigMasonryGridItem = (props: any) => {
               handleClick={handleNavigation}
             />
           </div>
-          <div className="hidden md:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-40">
+          <div className="hidden lg:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-40">
             <h3 className="text-lg font-semibold">{title}</h3>
             <p className="text-sm text-gray-600">{description}</p>
             <p className="text-sm">{priceRange}</p>

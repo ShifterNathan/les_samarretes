@@ -25,6 +25,7 @@ const HomePage = () => {
       <BackgroundAsImageWithCenteredContent backgroundImages={backgroundImages} />
       <section className="w-full flex flex-col gap-24 justify-center mt-32">
         <MasonryGrid />
+        
         <ProductByFilterGrid className={"self-center"} />
       </section>
     </>

@@ -34,7 +34,7 @@ const SmallMasonryGridItem = (props: any) => {
   return (
     <div className="lg:col-span-2 lg:row-span-1 col-span-6 row-span-2">
       <div
-        className="w-full h-64 hover:cursor-pointer object-cover bg-cover md:hover:scale-110 transition-transform duration-500 ease-in-out relative lg:flex lg:flex-col lg:justify-between"
+        className="w-full h-96 md:h-144 lg:h-96 hover:cursor-pointer object-cover bg-cover md:hover:scale-110 transition-transform duration-500 ease-in-out relative lg:flex lg:flex-col lg:justify-between"
         style={{
           backgroundImage: `url(${imgSrc})`,
           backgroundRepeat: "no-repeat",

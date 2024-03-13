@@ -39,47 +39,43 @@ const ProductByFilterGrid = (props: any) => {
     "https://source.unsplash.com/random/10",
     "https://source.unsplash.com/random/11",
     "https://source.unsplash.com/random/12",
-
   ];
 
   return (
-    <div
-      className={`w-9/12 flex flex-col items-center justify-center ${className}`}
-      style={{ maxWidth: "1400px" }}
-    >
-      <h3 className="text-3xl font-bold">Trendy Item</h3>
-      <div className="relative p-4">
-        <div className="flex space-x-4">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              ref={(el) => (tabsRef.current[tab] = el)}
-              className={`pb-2 ${
-                activeTab === tab
-                  ? "text-black"
-                  : "text-gray-400 hover:text-black"
-              }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
+      <div
+        className={`w-10/12 flex flex-col items-center justify-center ${className}`}
+      >
+        <h3 className="text-3xl font-bold">Trendy Item</h3>
+        <div className="relative pb-4">
+          <div className="flex space-x-4">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                ref={(el) => (tabsRef.current[tab] = el)}
+                className={`pb-2 ${
+                  activeTab === tab
+                    ? "text-black"
+                    : "text-gray-400 hover:text-black"
+                }`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+          <div
+            className="absolute h-1 bg-black transition-all duration-300 ease-out"
+            style={{ ...underlineStyle }}
+          />
         </div>
         <div
-          className="absolute h-1 bg-black transition-all duration-300 ease-out"
-          style={{ ...underlineStyle }}
-        />
+          className={`w-full grid grid-cols-2 grid-rows-6 xl:grid-cols-4 xl:grid-rows-3 gap-4 place-items-center`}
+        >
+          {imageSources.map((imgSrc, i) => {
+            return <ProductFilterGridItem imgSrc={imgSrc} />;
+          })}
+        </div>
       </div>
-      <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-auto `}>
-       {
-        imageSources.map((imgSrc, i) => {
-          return (
-            <ProductFilterGridItem imgSrc={imgSrc}/>
-          )
-        })
-       }
-      </div>
-    </div>
   );
 };
 
