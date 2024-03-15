@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const HoverIconWithTooltip = (props: any) => {
-    const { Icon, iconClass, tooltipText, handleClick, popover } = props;
+    const { Icon, iconClass, tooltipText, handleClick, popover, position } = props;
     const [showTooltip, setShowTooltip] = useState(false);
 
     const handleAction = (e: any, action: any) => {
@@ -20,7 +20,7 @@ const HoverIconWithTooltip = (props: any) => {
           <Icon className={`${iconClass ? iconClass : 'h-4 w-4'} text-white `} />
         </button>
         {showTooltip && (
-          <div className="flex items-center justify-center absolute p-1 text-xs rounded bg-black text-white w-auto whitespace-nowrap" style={{ bottom: '50px'}}>
+          <div className="flex items-center justify-center absolute p-1 text-xs rounded bg-black text-white w-auto whitespace-nowrap" style={position}>
             {tooltipText}
           </div>
           

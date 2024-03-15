@@ -3,8 +3,9 @@ import { useState } from "react";
 import HoverIconWithTooltip from "./HoverIconWithTooltip";
 import { useNavigate } from "react-router-dom";
 import MasonryItemProductPopover from "./MasonryItemProductPopover";
+import { IMasonryGridItem } from "../../interfaces/MasonryGrid/IMasonryGridItem";
 
-const SmallMasonryGridItem = (props: any) => {
+const SmallMasonryGridItem = (props: IMasonryGridItem) => {
   const { imgSrc, title, description, priceRange } = props;
   const [isHovered, setIsHovered] = useState(false);
   const [showProductPopover, setShowProductPopover] = useState(false);
@@ -46,8 +47,8 @@ const SmallMasonryGridItem = (props: any) => {
         {isHovered && (
           <>
             <div className="hidden md:flex justify-around p-2 bg-white animate-fade-in animate-duration-300 z-50">
-              <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" handleClick={handleNavigation} popover={true} />
-              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" handleClick={handleNavigation} />
+              <HoverIconWithTooltip Icon={EyeIcon} tooltipText="View" handleClick={handleNavigation} popover={true} position={{ bottom: '50px' }} />
+              <HoverIconWithTooltip Icon={HeartIcon} tooltipText="Like" handleClick={handleNavigation} position={{ bottom: '50px' }} />
             </div>
             <div className="hidden md:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-20">
               <h3 className="text-lg font-semibold">{title}</h3>

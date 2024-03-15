@@ -3,8 +3,9 @@ import { useState } from "react";
 import HoverIconWithTooltip from "./HoverIconWithTooltip";
 import { useNavigate } from "react-router-dom";
 import MasonryItemProductPopover from "./MasonryItemProductPopover";
+import { IMasonryGridItem } from "../../interfaces/MasonryGrid/IMasonryGridItem";
 
-const BigMasonryGridItem = (props: any) => {
+const BigMasonryGridItem = (props: IMasonryGridItem) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showProductPopover, setShowProductPopover] = useState(false);
   const navigate = useNavigate();
@@ -46,11 +47,13 @@ const BigMasonryGridItem = (props: any) => {
               tooltipText="View"
               handleClick={handleNavigation}
               popover={true}
+              position={{ bottom: '50px' }}
             />
             <HoverIconWithTooltip
               Icon={HeartIcon}
               tooltipText="Like"
               handleClick={handleNavigation}
+              position={{ bottom: '50px' }}
             />
           </div>
           <div className="hidden lg:flex p-4 bg-white flex-col items-center justify-center animate-fade-in animate-duration-300 h-40">
